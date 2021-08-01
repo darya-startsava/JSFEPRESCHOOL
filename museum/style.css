@@ -18,7 +18,11 @@
 
 html {
   scroll-behavior: smooth;
-  background: #e5e5e5;
+  margin: 0;
+}
+
+body {
+  margin: 0;
 }
 
 .container {
@@ -51,7 +55,6 @@ header li:last-child {
 
 header ul {
   display: flex;
-  /* position: absolute; */
   max-width: 720px;
 }
 
@@ -78,7 +81,7 @@ header li a {
 }
 
 .welcome-background {
-  background-image: url("assets/img/background.png");
+  background-image: url("assets/img/background.jpg");
   background-repeat: no-repeat;
   background-position: calc(50% + 352px);
 }
@@ -125,3 +128,111 @@ header li a {
   letter-spacing: 2px;
   color: #ffffff;
 }
+
+.visiting-section {
+  background-color: #ffffff;
+  height: 1150px;
+  margin-top: 85px;
+}
+
+.section-title {
+  font-family: Forum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 80px;
+  line-height: 90px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #9d8665;
+  margin-top: -10px;
+}
+
+.underline-title {
+  position: relative;
+}
+
+.underline-title::after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #710707;
+}
+
+.virtual-tour-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  margin-top: 100px;
+}
+
+.link {
+  display: block;
+  text-decoration-line: none;
+  
+}
+
+.card-image {
+  width: 440px;
+  height: 285px;
+}
+
+.card-title {
+  font-family: Forum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 35px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #000000;
+  margin-top: 25px;
+}
+
+.card-subtitle {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 22px;
+  line-height: 26px;
+  color: #000000;
+  margin-bottom: -10px;
+  margin-top: -10px;
+}
+
+.card-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.underline-h3 {
+  position: relative;
+}
+
+.underline-h3::after {
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  width: 300px;
+  height: 2px;
+  left: 0;
+  background-color: #710707;
+  transition: width 1.5s;
+}
+
+.link:hover .underline-h3::after {
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  width: 440px;
+  height: 2px;
+  left: 0;
+  background-color: #710707;
+ }
+

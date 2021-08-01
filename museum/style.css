@@ -133,6 +133,7 @@ header li a {
   background-color: #ffffff;
   height: 1150px;
   margin-top: 85px;
+  margin-bottom: 40px;
 }
 
 .section-title {
@@ -171,7 +172,6 @@ header li a {
 .link {
   display: block;
   text-decoration-line: none;
-  
 }
 
 .card-image {
@@ -234,5 +234,42 @@ header li a {
   height: 2px;
   left: 0;
   background-color: #710707;
- }
+}
 
+.container-explore-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.explore-section {
+  background-color: #030303;
+  height: 715px;
+}
+
+.description-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 38px;
+  color: #ffffff;
+  margin-bottom: 27px;
+  
+}
+
+.imagine-with-description {
+    float:right;
+    margin-left: 60px;
+    margin-right: -230px;
+    margin-top: 16px;
+    
+}
+.section-explore-title {
+    margin-bottom: 102px;
+}
+#underline-title {
+    width: 660px;
+}
+.yellow {
+    color: #CAAA7D;
+}

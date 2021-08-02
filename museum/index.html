@@ -27,7 +27,6 @@
     </header>
     <main>
         <section class="welcome-section welcome-background">
-
             <div class="container welcome-title">
                 <h1 class="section-title-dark">Welcome</h1>
                 <h2 class="section-title-dark">to the Louvre</h2>
@@ -89,7 +88,6 @@
                         damaged in any way, but because it looked different.</p>
                 </div>
             </div>
-
         </section>
         <section class="section video-section" id="video">
             <div class="container">
@@ -99,7 +97,7 @@
                     <button aria-label="Previous track" class="video-button button-prev"></button>
                     <button aria-label="Play" class="video-button button-play"></button>
                     <button aria-label="Next track" class="video-button button-next"></button>
-                    <input aria-label="Progress bar"type="range" class="progress-bar">
+                    <input aria-label="Progress bar" type="range" class="progress-bar">
                     <button aria-label="Button volume" class="video-button button-volume"></button>
                     <input aria-label="Volume control" type="range" class="volume-control">
                     <button aria-label="Full screen video" class="video-button button-full-screen"></button>
@@ -110,17 +108,62 @@
                         masterpieces such as Mona Lisa or Hammurabi's Code</p>
                 </div>
             </div>
-
         </section>
         <section class="section tickets-section" id="tickets">
-
+            <div class="container">
+                <h2 class="section-title-dark underline-title section-explore-title">Buy tickets</h2>
+                <div class="buy-tickets">
+                    <img src="assets/img/image-buy-tickets.jpg" alt="image" class="buy-tickets-image">
+                    <div class="ticket-type-form">
+                        <h3 class="buy-tickets-subtitle ticket-type-subtitle">Ticket Type</h3>
+                        <div>
+                            <label class="radio-button tickets-text">
+                                <input type="radio" name="ticket-type" value="permanent-exhibition">
+                                Permanent exhibition
+                                <span class="checkmark"></span>
+                            </label>
+                            <br>
+                            <br>
+                            <label class="radio-button tickets-text">
+                                <input type="radio" name="ticket-type" value="temporary-exhibition">
+                                Temporary exhibition
+                                <span class="checkmark"></span>
+                            </label>
+                            <br>
+                            <br>
+                            <label class="radio-button tickets-text">
+                                <input type="radio" name="ticket-type" value="combined-admission">
+                                Combined Admission
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="amount-form">
+                            <h3 class="buy-tickets-subtitle amount-subtitle">Amount</h3>
+                            <p class="tickets-text tickets-text-age"> Basic 18+</p>
+                            <div class="button-quantity">
+                                <button type="button" class="number sign">&minus;</button>
+                                <input type="number" min="0" max="20" value="1" readonly class="number tickets-text">
+                                <button type="button" class="number sign">+</button>
+                            </div>
+                            <p class="tickets-text tickets-text-age"> Senior 65+</p>
+                            <div class="button-quantity">
+                                <button type="button" class="number sign">&minus;</button>
+                                <input type="number" min="0" max="20" value="1" readonly class="number tickets-text">
+                                <button type="button" class="number sign">+</button>
+                            </div>
+                            <p class=" buy-tickets-subtitle buy-tickets-total">Total &euro;220</p>
+                        </div>
+                        <button class="buy-now-button">Buy Now</button>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="section contacts-section" id="contacts">
-
         </section>
     </main>
     <footer>
-
     </footer>
 </body>
 

@@ -41,6 +41,15 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  background-color: #9d8665;
+}
+
+a:hover,
+a:active {
+  color: #9d8665 !important;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1440px;
@@ -50,7 +59,6 @@ button {
 
 header {
   background-color: #030303;
-  /* background-image: url("assets/svg/logo.svg"); */
 }
 
 .header-container {
@@ -339,6 +347,10 @@ header li a {
   border: none;
 }
 
+button.video-button:hover {
+  background-color: #030303;
+}
+
 .button-prev {
   background: url("assets/img/video-button-prev.png");
   width: 27px;
@@ -448,50 +460,44 @@ header li a {
   margin-left: -4px;
 }
 
-/* Hide the browser's default radio button */
 .radio-button input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
 
-/* Create a custom radio button */
 .checkmark {
   position: absolute;
   top: 0;
   left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
+  height: 15px;
+  width: 15px;
+  background-color: #000;
   border-radius: 50%;
+  border:2px solid #fff;
 }
 
-/* On mouse-over, add a grey background color */
 .radio-button:hover input ~ .checkmark {
   background-color: #ccc;
 }
 
-/* When the radio button is checked, add a blue background */
 .radio-button input:checked ~ .checkmark {
-  background-color: #2196f3;
+  background-color: #000;
 }
 
-/* Create the indicator (the dot/circle - hidden when not checked) */
 .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-/* Show the indicator (dot/circle) when checked */
 .radio-button input:checked ~ .checkmark:after {
   display: block;
 }
 
-/* Style the indicator (dot/circle) */
 .radio-button .checkmark:after {
-  top: 9px;
-  left: 9px;
+  top: 3px;
+  left: 3px;
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -569,8 +575,9 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .contacts-section {
   background-color: #ffffff;
-  height: 813px;
+  height: 728px;
   margin-top: 10px;
+  margin-bottom: 75px;
 }
 
 .map-image {
@@ -605,4 +612,49 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .contacts-section-text-first {
   margin-top: 50px;
+}
+
+.footer-section {
+  background-color: #030303;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  height: 150px;
+  background-color: #030303;
+}
+
+.footer-logo {
+  width: 195px;
+  height: 50px;
+}
+
+.footer-nav {
+  margin-left: -350px;
+}
+
+.footer-nav ul {
+  float: left;
+  margin-left: 120px;
+}
+
+.footer-nav ul li {
+  margin-bottom: 25px;
+}
+
+.footer-nav a {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 22px;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.social-nav li {
+  float: left;
+  margin-left: 24px;
+  margin-top: 75px;
 }

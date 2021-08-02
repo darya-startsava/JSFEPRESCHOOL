@@ -11,6 +11,12 @@
 }
 
 @font-face {
+  font-family: Roboto;
+  src: url("assets/fonts/Roboto/Roboto-Bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
   font-family: Forum;
   src: url("assets/fonts/Forum/Forum-Regular.ttf");
   font-weight: 400;
@@ -310,6 +316,7 @@ header li a {
 .video-section {
   background-color: #ffffff;
   padding-top: 87px;
+  height: 848px;
 }
 
 .video-nav {
@@ -373,6 +380,184 @@ header li a {
   position: absolute;
   margin-top: 205px;
   margin-left: 610px;
-  background:url("assets/img/video-button-main.png");
-  border:none;
+  background: url("assets/img/video-button-main.png");
+  border: none;
 }
+
+.tickets-section {
+  background-color: #030303;
+  height: 743px;
+}
+
+.buy-tickets {
+  display: flex;
+  flex-direction: row;
+}
+
+.buy-tickets-image {
+  width: 720px;
+  height: 550px;
+}
+
+.ticket-type-form {
+  margin-left: 60px;
+  margin-top: -28px;
+  width: 270px;
+}
+
+.buy-tickets-subtitle {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 33px;
+  color: #ffffff;
+}
+
+.ticket-type-subtitle {
+  margin-bottom: 50px;
+}
+
+.tickets-text {
+  color: #ffffff !important;
+  font-family: Roboto !important;
+  font-style: normal !important;
+  font-weight: 200 !important;
+  font-size: 22px !important;
+}
+
+.radio-button {
+  display: block;
+  position: relative;
+  padding-left: 45px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-decoration: none;
+  color: #ffffff;
+  margin-left: -4px;
+}
+
+/* Hide the browser's default radio button */
+.radio-button input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radio-button:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio-button input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio-button input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio-button .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+.amount-form {
+  margin-left: 240px;
+  margin-top: -28px;
+  width: 150px;
+}
+
+.amount-subtitle {
+  text-align: right;
+  margin-bottom: -10px;
+}
+
+.tickets-text-age {
+  text-align: left;
+}
+
+.number {
+  all: unset;
+  width: 3em;
+  text-align: center;
+}
+
+.button-quantity {
+  border: 3px solid #fff;
+  width: 142px;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -8px;
+  margin-bottom: 34px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.sign {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 37px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.buy-tickets-total {
+  letter-spacing: 1.65px;
+  line-height: 50px;
+}
+
+.buy-now-button {
+  width: 175px;
+  height: 50px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #000000;
+  background-color: #ffffff;
+  float: right;
+  margin-top: 18px;
+}
+

@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+
+/* html {
+    overflow-y: hidden;
+} */
+
+body {
+  position: relative;
+  height: 100vh;
+}
+
+.right-side {
+}
+
+.container-properties {
+  position: relative;
+  height: 100vh;
+}
+
+.left-side {
+  height: 100vh;
+  color: #f2f9f9;
+}
+
+.left-side-with-slides {
+  height: 100vh;
+}
+
+.left-side-slide {
+  height: 100vh;
+}
+
+.left-side-slide h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+}
+
+.left-side-slide p {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+.left-side-first-slide {
+  background-color: #76593d;
+}
+
+.left-side-second-slide {
+  background-color: #586065;
+}
+
+.left-side-third-slide {
+  background-color: #0594f9;
+}
+
+.left-side-fourth-slide {
+  background-color: #f99c05;
+}
+
+.right-side {
+  height: 100vh;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+}
+
+.image-fourth {
+  background: url("assets/img/drum.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.image-third {
+  background: url("assets/img/guitars.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.image-second {
+  background: url("assets/img/piano.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.image-first {
+  background: url("assets/img/violin.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.button {
+  position: absolute;
+  top: 50%;
+  z-index: 100%;
+  background-color: #f2f9f9;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.button:hover {
+  color: #000;
+}
+
+.button-action-down {
+  position: absolute;
+  right: 0%;
+  border-top-left-radius: 7%;
+  border-bottom-left-radius: 7%;
+}
+
+.button-action-up {
+  left: 0%;
+  transform: translateY(-100%);
+  border-top-right-radius: 7%;
+  border-bottom-right-radius: 7%;
+}
+  

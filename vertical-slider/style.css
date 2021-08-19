@@ -1,15 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
 
-/* html {
+html {
     overflow-y: hidden;
-} */
+}
 
 body {
   position: relative;
   height: 100vh;
-}
-
-.right-side {
 }
 
 .container-properties {
@@ -41,7 +38,7 @@ body {
 }
 
 .left-side-first-slide {
-  background-color: #76593d;
+  background-color: #633706;
 }
 
 .left-side-second-slide {
@@ -53,11 +50,15 @@ body {
 }
 
 .left-side-fourth-slide {
-  background-color: #f99c05;
+  background-color: #f29d2a;
 }
 
 .right-side {
   height: 100vh;
+}
+
+.right-side-slide {
+    height: 100vh;
 }
 
 .image {

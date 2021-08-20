@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
 
 html {
-    overflow-y: hidden;
+  overflow-y: hidden;
 }
 
 body {
@@ -21,6 +21,7 @@ body {
 
 .left-side-with-slides {
   height: 100vh;
+  transition: transform 0.5s ease-in-out;
 }
 
 .left-side-slide {
@@ -58,7 +59,8 @@ body {
 }
 
 .right-side-slide {
-    height: 100vh;
+  height: 100vh;
+  transition: transform 0.5s ease-in-out;
 }
 
 .image {

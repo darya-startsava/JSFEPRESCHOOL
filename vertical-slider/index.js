@@ -5,42 +5,52 @@ const buttonUp = document.querySelector('.button-action-up');
 const buttonDown = document.querySelector('.button-action-down');
 
 let activeSlideIndex = 0;
-console.log(slideLength);
+let isEnabled = true;
 slideLeft.style.top = `-${(slideLength - 1) * 100}vh`;
 
-function changeSlide(direction) {
-    if (direction === 'up') {
-        activeSlideIndex++;
-        if (activeSlideIndex > slideLength - 1) {
-            activeSlideIndex = 0;
-        };
-    }
-    else if (direction === 'down') {
-        activeSlideIndex--;
-        if (activeSlideIndex < 0) {
-            activeSlideIndex = slideLength - 1;
-        };
-    };
+function transform() {
     slideRight.style.transform = `translateY(-${activeSlideIndex * slideLeft.clientHeight}px)`;
     slideLeft.style.transform = `translateY(${activeSlideIndex * slideLeft.clientHeight}px)`;
+    slideRight.addEventListener('transitionend', () => { isEnabled = true; });
+};
+
+function changeSlide(direction) {
+    if (isEnabled) {
+        isEnabled = false;
+        if (direction === 'up') {
+            activeSlideIndex++;
+            if (activeSlideIndex > slideLength - 1) {
+                activeSlideIndex = 0;
+            }
+        }
+        else if (direction === 'down') {
+            activeSlideIndex--;
+            if (activeSlideIndex < 0) {
+                activeSlideIndex = slideLength - 1;
+            }
+        }
+        transform();
+    }
 };
 
 
 function wheel(e) {
-    if (e.deltaY > 0) {
-        activeSlideIndex++;
-        if (activeSlideIndex > slideLength - 1) {
-            activeSlideIndex = 0;
-        };
+    if (isEnabled) {
+        isEnabled = false;
+        if (e.deltaY > 0) {
+            activeSlideIndex++;
+            if (activeSlideIndex > slideLength - 1) {
+                activeSlideIndex = 0;
+            }
+        }
+        else if (e.deltaY < 0) {
+            activeSlideIndex--;
+            if (activeSlideIndex < 0) {
+                activeSlideIndex = slideLength - 1;
+            }
+        }
+        transform();
     }
-    else if (e.deltaY < 0) {
-        activeSlideIndex--;
-        if (activeSlideIndex < 0) {
-            activeSlideIndex = slideLength - 1;
-        };
-    };
-    slideRight.style.transform = `translateY(-${activeSlideIndex * slideLeft.clientHeight}px)`;
-    slideLeft.style.transform = `translateY(${activeSlideIndex * slideLeft.clientHeight}px)`;
 };
 
 buttonUp.addEventListener('click', () => changeSlide('up'));

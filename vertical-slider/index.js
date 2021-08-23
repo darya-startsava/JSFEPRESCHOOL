@@ -65,3 +65,5 @@ function wheel(e) {
 buttonUp.addEventListener('click', () => changeSlide('up'));
 buttonDown.addEventListener('click', () => changeSlide('down'));
 document.addEventListener('wheel', wheel);
+
+console.log('Самооценка: 30/30 (исходный проект + бесконечный слайдер + пролистывание слайдера колесиком мыши).')

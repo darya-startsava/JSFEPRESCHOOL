@@ -16,12 +16,11 @@ body {
 
 .left-side {
   height: 100vh;
-  color: #f2f9f9;
+  color: #f7f2f9;
 }
 
 .left-side-with-slides {
   height: 100vh;
-  transition: transform 0.5s ease-in-out;
 }
 
 .left-side-slide {
@@ -59,8 +58,8 @@ body {
 }
 
 .right-side-slide {
+  top:-100vh;
   height: 100vh;
-  transition: transform 0.5s ease-in-out;
 }
 
 .image {
@@ -124,4 +123,8 @@ body {
   border-top-right-radius: 7%;
   border-bottom-right-radius: 7%;
 }
+
+.shifting {
+    transition: top .5s ease-out;
+  }
   

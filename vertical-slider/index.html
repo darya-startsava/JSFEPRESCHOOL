@@ -6,10 +6,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vertical Slider</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/svg/note.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/svg/note.png">
+    <link rel="preload" href="./assets/img/drum.jpg" as="image" />
+    <link rel="preload" href="./assets/img/guitars.jpg" as="image" />
+    <link rel="preload" href="./assets/img/piano.jpg" as="image" />
+    <link rel="preload" href="./assets/img/violin.jpg" as="image" />
 </head>
 
 <body>
@@ -17,6 +21,10 @@
         <div class="row g-0">
             <div class="col-4 left-side position-relative">
                 <div class="left-side-with-slides position-relative">
+                    <div class="left-side-slide left-side-fourth-slide d-flex flex-column">
+                        <h1 class="mt-auto mb-2 text-center">Drum </h1>
+                        <p class="mb-auto text-center">Let's make some noise!</p>
+                    </div>
                     <div class="left-side-slide left-side-first-slide d-flex flex-column">
                         <h1 class="mt-auto mb-2 text-center">Violin </h1>
                         <p class="mb-auto text-center">Just to play Vivaldi!</p>
@@ -33,6 +41,10 @@
                         <h1 class="mt-auto mb-2 text-center">Drum </h1>
                         <p class="mb-auto text-center">Let's make some noise!</p>
                     </div>
+                    <div class="left-side-slide left-side-first-slide d-flex flex-column">
+                        <h1 class="mt-auto mb-2 text-center">Violin </h1>
+                        <p class="mb-auto text-center">Just to play Vivaldi!</p>
+                    </div>
                 </div>
                 <div class="button-action">
                     <button class="button button-action-down">
@@ -44,12 +56,14 @@
                     </button>
                 </div>
             </div>
-            <div class="col-8 right-side position-relative">
-                <div class="right-side-slide">
+            <div class="col-8 right-side position-relative ">
+                <div class="right-side-slide position-relative shifting">
+                    <div class="image image-first"></div>
                     <div class="image image-fourth"></div>
                     <div class="image image-third"></div>
                     <div class="image image-second"></div>
                     <div class="image image-first"></div>
+                    <div class="image image-fourth"></div>
                 </div>
                 <div class="button-action">
                     <button class=" button button-action-up">

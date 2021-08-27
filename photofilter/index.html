@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title> Photofilter</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="text-center">Photofilter</h1>
+    </header>
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-3 position-relative filters">
+                    <div class="row mb-3">
+                        <div class="col-4 ">
+                            <label for="spasing">Spasing</label>
+                        </div>
+                        <div class="col-8">
+                            <input type="range" name="spasing" id="spasing" min="0" max="200" value="10"
+                                data-sizing="px">
+                        </div>
+                    </div>
+                    <div class="row my-3">
+                        <div class="col-4">
+                            <label for="base-color">Base Color</label>
+                        </div>
+                        <div class="col-8">
+                            <input type="color" name="base-color" id="base-color" value="#FFFFFF">
+                        </div>
+                    </div>
+                    <div class="row my-3">
+                        <div class="col-4">
+                            <label for="blur">Blur</label>
+                        </div>
+                        <div class="col-8">
+                            <input type="range" name="blur" id="blur" min="0" max="20" value="0" data-sizing="px">
+                        </div>
+                    </div>
+                    <div class="row my-3">
+                        <div class="col-4">
+                            <label for="opacity">Opacity</label>
+                        </div>
+                        <div class="col-8">
+                            <input type="range" name="opacity" id="opasity" min="0" max="100" value="50"
+                                data-sizing="%">
+                        </div>
+                    </div>
+                    <div class="row my-3">
+                        <div class="col-4">
+                            <label for="saturate">Saturate</label>
+                        </div>
+                        <div class="col-8">
+                            <input type="range" name="saturate" id="saturate" min="0" max="200" value="100"
+                                data-sizing="%">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8 position-relative">
+                    <div class="col">
+                        <img src="./assets/meadow-flowers.jpg" alt="Photo" class="image">
+                    </div>
+                    <div class="col">Pressets</div>
+                </div>
+                <div class="col-1 position-relative">
+                    <Button>Add your photo</Button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

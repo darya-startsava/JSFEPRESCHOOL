@@ -1,16 +1,52 @@
+:root {
+  --spacing: 0px;
+  --base-color: #89ff8f;
+  --blur: 0px;
+  --opacity: 100%;
+  --saturate: 100%;
+  --contrast: 100%;
+  --sepia: 0%;
+  --brightness: 100%;
+}
+
 body {
   position: relative;
   height: 100vh;
   background-color: #bcf5ff;
 }
+
 h1 {
-    font-variant: all-small-caps;
+  font-variant: all-small-caps;
+  color: var(--base-color);
 }
 
 .image {
-height: 100%;
-width: 100%;
-max-height: 520px;
-max-width: 830px;
-object-fit: contain;
+  height: 100%;
+  width: 100%;
+  }
+
+.original-photo {
+    max-height: 520px;
+    max-width: 720px;
+    filter: blur(var(--blur)) opacity(var(--opacity)) saturate(var(--saturate)) contrast(var(--contrast)) sepia(var(--sepia)) brightness(var(--brightness));
+}
+.frame {
+  
+  border: var(--spacing) var(--base-color) solid;
+}
+
+.image-preset-1 {
+
+}
+.image-preset-2 {
+
+}
+.image-preset-3 {
+
+}
+.image-preset-4 {
+
+}
+.image-preset-5 {
+
 }

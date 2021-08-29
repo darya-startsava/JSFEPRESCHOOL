@@ -1,6 +1,6 @@
 :root {
   --spacing: 0px;
-  --base-color: #89ff8f;
+  --base-color: #2f3756;
   --blur: 0px;
   --opacity: 100%;
   --saturate: 100%;
@@ -23,30 +23,42 @@ h1 {
 .image {
   height: 100%;
   width: 100%;
-  }
+}
 
 .original-photo {
-    max-height: 520px;
-    max-width: 720px;
-    filter: blur(var(--blur)) opacity(var(--opacity)) saturate(var(--saturate)) contrast(var(--contrast)) sepia(var(--sepia)) brightness(var(--brightness));
+  max-height: 520px;
+  max-width: 720px;
+  filter: blur(var(--blur)) opacity(var(--opacity)) saturate(var(--saturate)) contrast(var(--contrast)) sepia(var(--sepia)) brightness(var(--brightness));
 }
+
 .frame {
-  
   border: var(--spacing) var(--base-color) solid;
 }
 
+.preset{
+    cursor: pointer;
+}
+
+.image-preset-0 {
+  filter: blur(0px) opacity(100%) saturate(100%) contrast(100%) sepia(0%) brightness(100%);
+}
+
 .image-preset-1 {
-
+  filter: saturate(60%) contrast(90%) sepia(0%) brightness(100%);
 }
+
 .image-preset-2 {
-
+  filter: saturate(100%) contrast(100%) sepia(60%) brightness(85%);
 }
+
 .image-preset-3 {
-
+  filter: saturate(0%) contrast(100%) sepia(50%) brightness(100%);
 }
+
 .image-preset-4 {
-
+  filter: saturate(100%) contrast(160%) sepia(30%) brightness(100%);
 }
-.image-preset-5 {
 
+.image-preset-5 {
+  filter: saturate(35%) contrast(120%) sepia(50%) brightness(70%);
 }

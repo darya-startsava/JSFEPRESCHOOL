@@ -12,18 +12,19 @@
 
 <body>
     <header>
-        <h1 class="text-center">Photofilter</h1>
+        <h1 class="text-center text-uppercase my-5">Photofilter</h1>
     </header>
     <main>
-        <div class="container-fluid">
+        <div class=" container">
             <div class="row">
-                <div class="col-2 position-relative filters">
+                <div class="col-sm-3 col-12 position-relative filters">
                     <div class="row mb-3">
                         <div class="col-4 ">
                             <label for="spacing">Spacing</label>
                         </div>
                         <div class="col-8">
-                            <input type="range" name="spacing" id="spacing" min="0" max="80" value="0" data-sizing="px">
+                            <input type="range" name="spacing" id="spacing" class="input" min="0" max="70" value="0"
+                                data-sizing="px">
                         </div>
                     </div>
                     <div class="row my-3">
@@ -31,7 +32,7 @@
                             <label for="base-color">Base Color</label>
                         </div>
                         <div class="col-8">
-                            <input type="color" name="base-color" id="base-color" value="#2f3756">
+                            <input type="color" name="base-color" id="base-color" class="input-color" value="#2f3756">
                         </div>
                     </div>
                     <div class="row my-3">
@@ -39,7 +40,8 @@
                             <label for="blur">Blur</label>
                         </div>
                         <div class="col-8">
-                            <input type="range" name="blur" id="blur" min="0" max="20" value="0" data-sizing="px">
+                            <input type="range" name="blur" id="blur" class="input" min="0" max="20" value="0"
+                                data-sizing="px">
                         </div>
                     </div>
                     <div class="row my-3">
@@ -47,7 +49,7 @@
                             <label for="opacity">Opacity</label>
                         </div>
                         <div class="col-8">
-                            <input type="range" name="opacity" id="opacity" min="0" max="100" value="100"
+                            <input type="range" name="opacity" id="opacity" class="input" min="0" max="100" value="100"
                                 data-sizing="%">
                         </div>
                     </div>
@@ -56,8 +58,8 @@
                             <label for="saturate">Saturate</label>
                         </div>
                         <div class="col-8">
-                            <input type="range" name="saturate" id="saturate" min="0" max="200" value="100"
-                                data-sizing="%">
+                            <input type="range" name="saturate" id="saturate" class="input" min="0" max="200"
+                                value="100" data-sizing="%">
                         </div>
                     </div>
                     <div class="row my-3">
@@ -65,8 +67,8 @@
                             <label for="contrast">Contrast</label>
                         </div>
                         <div class="col-8">
-                            <input type="range" name="contrast" id="contrast" min="0" max="200" value="100"
-                                data-sizing="%">
+                            <input type="range" name="contrast" id="contrast" class="input" min="0" max="200"
+                                value="100" data-sizing="%">
                         </div>
                     </div>
                     <div class="row my-3">
@@ -74,7 +76,8 @@
                             <label for="sepia">Sepia</label>
                         </div>
                         <div class="col-8">
-                            <input type="range" name="sepia" id="sepia" min="0" max="100" value="0" data-sizing="%">
+                            <input type="range" name="sepia" id="sepia" class="input" min="0" max="100" value="0"
+                                data-sizing="%">
                         </div>
                     </div>
                     <div class="row my-3">
@@ -82,55 +85,63 @@
                             <label for="brightness">Brightness</label>
                         </div>
                         <div class="col-8">
-                            <input type="range" name="brightness" id="brightness" min="0" max="200" value="100"
-                                data-sizing="%">
+                            <input type="range" name="brightness" id="brightness" class="input" min="0" max="200"
+                                value="100" data-sizing="%">
                         </div>
                     </div>
-                    <div class='button-reset'><button class='reset'>Reset</button></div>
+                    <div class='button-reset'>
+                        <button class='reset'>Reset</button>
+                    </div>
+                    <div class="button-add-photo">
+                        <label class="btn my-2" for="fileLoad">
+                            Load picture
+                            <input class="btn-add-photo" id="fileLoad" name="upload" type="file"
+                                placeholder="Load picture" accept=".jpg, .jpeg, .png, .gif" />
+                        </label>
+                    </div>
                 </div>
-                <div class="col-7 position-relative">
+                <div class="col-sm-7 col-12 position-relative">
                     <div class=" d-flex justify-content-center">
                         <div class="frame">
-                            <img src="./assets/meadow-flowers.jpg" alt="Photo" class="image original-photo">
+                            <div class="image-container">
+                                <img src="./assets/meadow-flowers.jpg" alt="Photo" class="image original-photo">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-2 position-relative">
+                <div class="col-sm-2 col-4 position-relative">
                     <div class="row">
                         <div class="col-7 mb-1">
                             <img src="./assets/meadow-flowers.jpg" alt="Normal" id="image-preset-0"
                                 class="preset image image-preset-0">
                         </div>
-                        <div class="col-5">Normal</div>
+                        <div class="col-5 text-center">Normal</div>
                         <div class="col-7 mb-1">
                             <img src="./assets/meadow-flowers.jpg" alt="preset 1" id="image-preset-1"
                                 class="preset image image-preset-1">
                         </div>
-                        <div class="col-5">Preset 1</div>
+                        <div class="col-5 text-center">Preset 1</div>
                         <div class="col-7 mb-1">
                             <img src="./assets/meadow-flowers.jpg" alt="preset 2" id="image-preset-2"
                                 class="preset image image-preset-2">
                         </div>
-                        <div class="col-5">Preset 2</div>
+                        <div class="col-5 text-center">Preset 2</div>
                         <div class="col-7 mb-1">
                             <img src="./assets/meadow-flowers.jpg" alt="preset 3" id="image-preset-3"
                                 class="preset image image-preset-3">
                         </div>
-                        <div class="col-5">Preset 3</div>
+                        <div class="col-5 text-center">Preset 3</div>
                         <div class="col-7 mb-1">
                             <img src="./assets/meadow-flowers.jpg" alt="preset 4" id="image-preset-4"
                                 class="preset image image-preset-4">
                         </div>
-                        <div class="col-5">Preset 4</div>
+                        <div class="col-5 text-center">Preset 4</div>
                         <div class="col-7 mb-1">
                             <img src="./assets/meadow-flowers.jpg" alt="preset 5" id="image-preset-5"
                                 class="preset image image-preset-5">
                         </div>
-                        <div class="col-5">Preset 5</div>
+                        <div class="col-5 text-center">Preset 5</div>
                     </div>
-                </div>
-                <div class="col-1 position-relative">
-                    <Button>Add your photo</Button>
                 </div>
             </div>
         </div>

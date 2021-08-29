@@ -20,6 +20,24 @@ h1 {
   color: var(--base-color);
 }
 
+.button-reset {
+  position: absolute;
+  margin: 50px 0 0 75px;
+}
+
+button {
+  border-radius: 10px;
+  border-color: var(--base-color);
+}
+
+.reset {
+  padding: 0 25px;
+}
+
+button:hover {
+  border: none;
+}
+
 .image {
   height: 100%;
   width: 100%;
@@ -35,8 +53,9 @@ h1 {
   border: var(--spacing) var(--base-color) solid;
 }
 
-.preset{
-    cursor: pointer;
+button,
+.preset {
+  cursor: pointer;
 }
 
 .image-preset-0 {

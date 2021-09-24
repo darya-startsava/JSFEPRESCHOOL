@@ -13,12 +13,16 @@
 <body>
     <header>
         <div class="container header-container">
-            <span> <img src=assets/svg/logo.svg alt="logo"> </span>
+            <div>
+                <span class="logo"> <img src=assets/svg/logo.svg alt="logo"> </span>
+                <span> <img src=assets/svg/louvre.svg alt="louvre"> </span>
+            </div>
             <nav>
                 <ul>
                     <li><a href="#visiting">Visiting</a></li>
                     <li><a href="#explore">Explore</a></li>
                     <li><a href="#video">Video</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#tickets">Tickets</a></li>
                     <li><a href="#contacts">Contacts</a></li>
                 </ul>
@@ -27,11 +31,19 @@
     </header>
     <main>
         <section id="welcome" class="welcome-section welcome-background">
-            <div class="container welcome-title">
-                <h1 class="section-title-dark">Welcome</h1>
-                <h2 class="section-title-dark">to the Louvre</h2>
-                <p class="welcome-text">From the castle to the museum</p>
-                <button class="welcome-button">Discover the Louvre</button>
+            <div class=" container welcome-slider">
+                <div class=" welcome-title">
+                    <h1>Louvre</h1>
+                    <h2 class="section-title-dark">Welcome</h2>
+                    <h2 class="section-title-dark">to the Louvre</h2>
+                    <p class="welcome-text">From the castle to the museum</p>
+                    <a href="https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736"
+                        class="welcome-button">Discover the Louvre</a>
+                </div>
+                <div class="welcome-slider-buttons">
+                    <img src='assets/img/slider-picture.png' alt="slider-picture">
+
+                </div>
             </div>
         </section>
         <section class="visiting-section" id="visiting">
@@ -76,16 +88,22 @@
         </section>
         <section class="section explore-section" id="explore">
             <div class="container container-explore-section">
-                <div><img src="assets/img/las-meninas.jpg" alt="Las Meninas" class="imagine-with-description">
-                    <h2 id="underline-title" class="section-title-dark underline-title section-explore-title">Picture
+                <div>
+                    <h2 id="underline-title" class="section-title-dark underline-title section-explore-title">
+                        Picture
                         explore</h2>
-                    <p class="description-text">Las Meninas is a 1656 painting by Diego Velázquez, the leading artist of
+                    <p class="description-text">Las Meninas is a 1656 painting by Diego Velázquez, the leading
+                        artist of
                         the Spanish Golden Age.</p>
                     <p class="description-text">It was cleaned in 1984 to remove a <span class="yellow">"yellow
                             veil"</span> of dust that had
                         gathered since the previous restoration in the 19th century.</p>
-                    <p class="description-text">The cleaning provoked furious protests, not because the picture had been
+                    <p class="description-text">The cleaning provoked furious protests, not because the picture had
+                        been
                         damaged in any way, but because it looked different.</p>
+                </div>
+                <div class="container-explorer-section-image"><img src="assets/img/las-meninas.jpg" alt="Las Meninas" class="explorer-section-image">
+                    <img src="assets/svg/explore-slider.svg" alt="explore-slider" class="explorer-slider">
                 </div>
             </div>
         </section>
@@ -177,7 +195,7 @@
     <footer class="section footer-section">
         <div class="container footer-container">
             <img src=assets/svg/logo.svg alt="logo" class="footer-logo">
-            <nav class="footer-nav"> 
+            <nav class="footer-nav">
                 <ul>
                     <li><a href="#welcome">Welcome</a></li>
                     <li><a href="#visiting">Visiting</a></li>

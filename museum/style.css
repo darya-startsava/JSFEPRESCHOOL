@@ -37,16 +37,23 @@ body {
   margin: 0;
 }
 
-button {
+button,
+.welcome-button {
   cursor: pointer;
+  transition: background-color .5s;
 }
 
-button:hover {
+button:hover,
+.welcome-button:hover {
   background-color: #9d8665;
 }
 
-a:hover,
-a:active {
+a {
+  transition: color .5s;
+}
+
+nav a:hover,
+nav a:active {
   color: #9d8665 !important;
 }
 
@@ -65,20 +72,26 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 200px;
+  height: 160px;
+}
+
+.logo {
+  margin-right: 25px;
 }
 
 header li {
   list-style: none;
-  padding-right: 76px;
+  padding: 0 28px;
 }
 
 header li:last-child {
-  padding-right: 0;
+  margin-right: 50px;
 }
 
 header ul {
   display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 720px;
 }
 
@@ -99,15 +112,24 @@ header li a {
   padding-bottom: 75px;
 }
 
+.welcome-slider {
+  display: flex;
+  height: 810px;
+}
+
 .welcome-section {
   background-color: #030303;
-  height: 750px;
+}
+
+h1 {
+  position: absolute;
+  left: -9999px;
 }
 
 .welcome-background {
   background-image: url("assets/img/background.jpg");
   background-repeat: no-repeat;
-  background-position: calc(50% + 352px);
+  background-position: calc(50% + 220px) 5%;
 }
 
 .section-title-dark {
@@ -124,6 +146,7 @@ header li a {
 }
 
 .welcome-text {
+  margin-bottom: 100px;
   font-family: Roboto;
   color: #ffffff;
   font-style: normal;
@@ -134,13 +157,14 @@ header li a {
 }
 
 .welcome-title {
-  padding-top: 114px;
+  flex-grow: 1;
+  padding-top: 150px;
 }
 
 .welcome-button {
   width: 360px;
   height: 75px;
-  margin-top: 48px;
+  padding: 24px 68px;
   background-color: #710707;
   border-radius: 10px;
   font-family: Roboto;
@@ -151,8 +175,21 @@ header li a {
   text-align: center;
   letter-spacing: 2px;
   color: #ffffff;
+  text-decoration: none;
 }
 
+.welcome-slider-buttons {
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
+  flex-grow: 2;
+  background-color: #000;
+  max-width: 600px;
+  height: 120px;
+  padding-bottom: 5px;
+}
+
+/* VISITING SECTION */
 .visiting-section {
   background-color: #ffffff;
   height: 1150px;
@@ -260,6 +297,8 @@ header li a {
   background-color: #710707;
 }
 
+
+/* EXPLORE SECTION */
 .container-explore-section {
   display: flex;
   justify-content: space-between;
@@ -278,15 +317,7 @@ header li a {
   line-height: 38px;
   color: #ffffff;
   margin-bottom: 27px;
-}
-
-.imagine-with-description {
-  float: right;
-  margin-left: 60px;
-  margin-right: -230px;
-  margin-top: 16px;
-  width: 720px;
-  height: 700px;
+  padding-right: 65px;
 }
 
 .section-explore-title {
@@ -301,6 +332,21 @@ header li a {
   color: #caaa7d;
 }
 
+.explorer-section-image {
+  margin-top: 15px;
+}
+
+.container-explorer-section-image {
+  position: relative;
+}
+
+.explorer-slider {
+  position: absolute;
+  left: 420px;
+  top: 13px;
+}
+
+/* VIDEO SECTION */
 .video-title-container {
   display: flex;
   justify-content: space-between;
@@ -474,7 +520,7 @@ button.video-button:hover {
   width: 15px;
   background-color: #000;
   border-radius: 50%;
-  border:2px solid #fff;
+  border: 2px solid #fff;
 }
 
 .radio-button:hover input ~ .checkmark {

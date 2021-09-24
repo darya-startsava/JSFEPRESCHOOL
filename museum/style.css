@@ -351,7 +351,6 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 53px;
 }
 
 .section-video-text {
@@ -367,8 +366,9 @@ h1 {
 }
 
 .video {
+  margin-top: 5px;
   width: 1440px;
-  height: 629px;
+  height: 650px;
   display: block;
   float: left;
 }
@@ -376,7 +376,7 @@ h1 {
 .video-section {
   background-color: #ffffff;
   padding-top: 87px;
-  height: 848px;
+  height: 1233px;
 }
 
 .video-nav {
@@ -442,11 +442,28 @@ button.video-button:hover {
   height: 220px;
   display: block;
   position: absolute;
-  margin-top: 205px;
+  margin-top: 215px;
   margin-left: 610px;
   background: url("assets/img/video-button-main.png");
   border: none;
 }
+
+.video-slider-container {
+  display: flex;
+  justify-content: space-between;
+  width: 1440px;
+  margin-top: 40px;
+}
+
+.video-slider-points {
+  background-image: url("./assets/svg/video-slider-points.svg");
+  width: 200px;
+  height: 12px;
+  margin: 40px auto;
+}
+
+
+/* TICKETS */
 
 .tickets-section {
   background-color: #030303;

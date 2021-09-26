@@ -41,12 +41,22 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.buy-now-button,
+.welcome-button {
+  transition: background-color .5s;
+}
+
+.buy-now-button:hover,
+.welcome-button:hover {
   background-color: #9d8665;
 }
 
-a:hover,
-a:active {
+a {
+  transition: color .5s;
+}
+
+nav a:hover,
+nav a:active {
   color: #9d8665 !important;
 }
 
@@ -65,20 +75,26 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 200px;
+  height: 160px;
+}
+
+.logo {
+  margin-right: 25px;
 }
 
 header li {
   list-style: none;
-  padding-right: 76px;
+  padding: 0 28px;
 }
 
 header li:last-child {
-  padding-right: 0;
+  margin-right: 50px;
 }
 
 header ul {
   display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 720px;
 }
 
@@ -99,15 +115,24 @@ header li a {
   padding-bottom: 75px;
 }
 
+.welcome-slider {
+  display: flex;
+  height: 810px;
+}
+
 .welcome-section {
   background-color: #030303;
-  height: 750px;
+}
+
+h1 {
+  position: absolute;
+  left: -9999px;
 }
 
 .welcome-background {
   background-image: url("assets/img/background.jpg");
   background-repeat: no-repeat;
-  background-position: calc(50% + 352px);
+  background-position: calc(50% + 220px) 5%;
 }
 
 .section-title-dark {
@@ -124,6 +149,7 @@ header li a {
 }
 
 .welcome-text {
+  margin-bottom: 100px;
   font-family: Roboto;
   color: #ffffff;
   font-style: normal;
@@ -134,13 +160,14 @@ header li a {
 }
 
 .welcome-title {
-  padding-top: 114px;
+  flex-grow: 1;
+  padding-top: 150px;
 }
 
 .welcome-button {
   width: 360px;
   height: 75px;
-  margin-top: 48px;
+  padding: 24px 68px;
   background-color: #710707;
   border-radius: 10px;
   font-family: Roboto;
@@ -151,8 +178,21 @@ header li a {
   text-align: center;
   letter-spacing: 2px;
   color: #ffffff;
+  text-decoration: none;
 }
 
+.welcome-slider-buttons {
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
+  flex-grow: 2;
+  background-color: #000;
+  max-width: 600px;
+  height: 120px;
+  padding-bottom: 5px;
+}
+
+/* VISITING SECTION */
 .visiting-section {
   background-color: #ffffff;
   height: 1150px;
@@ -260,6 +300,8 @@ header li a {
   background-color: #710707;
 }
 
+
+/* EXPLORE SECTION */
 .container-explore-section {
   display: flex;
   justify-content: space-between;
@@ -278,15 +320,7 @@ header li a {
   line-height: 38px;
   color: #ffffff;
   margin-bottom: 27px;
-}
-
-.imagine-with-description {
-  float: right;
-  margin-left: 60px;
-  margin-right: -230px;
-  margin-top: 16px;
-  width: 720px;
-  height: 700px;
+  padding-right: 65px;
 }
 
 .section-explore-title {
@@ -301,11 +335,25 @@ header li a {
   color: #caaa7d;
 }
 
+.explorer-section-image {
+  margin-top: 15px;
+}
+
+.container-explorer-section-image {
+  position: relative;
+}
+
+.explorer-slider {
+  position: absolute;
+  left: 420px;
+  top: 13px;
+}
+
+/* VIDEO SECTION */
 .video-title-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 53px;
 }
 
 .section-video-text {
@@ -321,8 +369,9 @@ header li a {
 }
 
 .video {
+  margin-top: 5px;
   width: 1440px;
-  height: 629px;
+  height: 650px;
   display: block;
   float: left;
 }
@@ -330,7 +379,7 @@ header li a {
 .video-section {
   background-color: #ffffff;
   padding-top: 87px;
-  height: 848px;
+  height: 1233px;
 }
 
 .video-nav {
@@ -396,14 +445,67 @@ button.video-button:hover {
   height: 220px;
   display: block;
   position: absolute;
-  margin-top: 205px;
+  margin-top: 215px;
   margin-left: 610px;
   background: url("assets/img/video-button-main.png");
   border: none;
 }
 
-.tickets-section {
+.video-slider-container {
+  display: flex;
+  justify-content: space-between;
+  width: 1440px;
+  margin-top: 40px;
+}
+
+.video-slider-points {
+  background-image: url("./assets/svg/video-slider-points.svg");
+  width: 200px;
+  height: 12px;
+  margin: 40px auto;
+}
+
+/* GALLERY SECTION */
+.container-gallery-inner-section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 36px;
+  row-gap: 24px;
+  height: 2980px;
+}
+
+.gallery-title {
+  margin-bottom: 75px;
+}
+
+.container-gallery-inner-section img:nth-child(1) {
+  margin-top: 55px;
+}
+
+.container-gallery-inner-section img:nth-child(11) {
+  margin-top: 55px;
+}
+
+.container-gallery-section {
+  height: 2053px;
+  overflow-y: hidden;
+  -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), transparent);
+  mask-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), transparent);
+}
+
+.gallery-section {
   background-color: #030303;
+}
+
+.gallery-picture {
+  width: 456px;
+}
+/* TICKETS SECTION*/
+
+.tickets-section {
+  background-color: #fff;
   height: 743px;
 }
 
@@ -429,7 +531,7 @@ button.video-button:hover {
   font-weight: bold;
   font-size: 28px;
   line-height: 33px;
-  color: #ffffff;
+  color: #030303;
 }
 
 .ticket-type-subtitle {
@@ -437,10 +539,10 @@ button.video-button:hover {
 }
 
 .tickets-text {
-  color: #ffffff !important;
+  color: #030303 !important;
   font-family: Roboto !important;
   font-style: normal !important;
-  font-weight: 200 !important;
+  font-weight: 300 !important;
   font-size: 22px !important;
 }
 
@@ -448,7 +550,7 @@ button.video-button:hover {
   display: block;
   position: relative;
   padding-left: 45px;
-  margin-bottom: 12px;
+  margin-bottom: 25px;
   cursor: pointer;
   font-size: 22px;
   -webkit-user-select: none;
@@ -456,7 +558,7 @@ button.video-button:hover {
   -ms-user-select: none;
   user-select: none;
   text-decoration: none;
-  color: #ffffff;
+  color: #030303;
   margin-left: -4px;
 }
 
@@ -468,13 +570,13 @@ button.video-button:hover {
 
 .checkmark {
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 15px;
-  width: 15px;
-  background-color: #000;
+  top: 5px;
+  left: 5px;
+  height: 13px;
+  width: 13px;
+  background-color: #fff;
   border-radius: 50%;
-  border:2px solid #fff;
+  border: 2px solid #030303;
 }
 
 .radio-button:hover input ~ .checkmark {
@@ -482,7 +584,7 @@ button.video-button:hover {
 }
 
 .radio-button input:checked ~ .checkmark {
-  background-color: #000;
+  background-color: #fff;
 }
 
 .checkmark:after {
@@ -496,12 +598,12 @@ button.video-button:hover {
 }
 
 .radio-button .checkmark:after {
-  top: 3px;
-  left: 3px;
+  top: 2.5px;
+  left: 2.5px;
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: white;
+  background: #030303;
 }
 
 .amount-form {
@@ -512,11 +614,13 @@ button.video-button:hover {
 
 .amount-subtitle {
   text-align: right;
-  margin-bottom: -10px;
+  margin-bottom: -30px;
 }
 
 .tickets-text-age {
   text-align: left;
+  margin-top: 55px;
+  margin-bottom: 10px;
 }
 
 .number {
@@ -526,14 +630,13 @@ button.video-button:hover {
 }
 
 .button-quantity {
-  border: 3px solid #fff;
+  border: 4px solid #030303;
   width: 142px;
   height: 45px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: -8px;
-  margin-bottom: 34px;
+  margin-bottom: -45px;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
@@ -549,12 +652,13 @@ input[type="number"]::-webkit-inner-spin-button {
   font-size: 32px;
   line-height: 37px;
   text-align: center;
-  color: #ffffff;
+  color: #030303;
 }
 
 .buy-tickets-total {
   letter-spacing: 1.65px;
   line-height: 50px;
+  margin-top: 90px;
 }
 
 .buy-now-button {
@@ -567,12 +671,14 @@ input[type="number"]::-webkit-inner-spin-button {
   line-height: 26px;
   text-align: center;
   letter-spacing: 2px;
-  color: #000000;
-  background-color: #ffffff;
+  color: #fff;
+  background-color: #030303;
   float: right;
   margin-top: 18px;
+  border: none;
 }
 
+/* CONTACTS SECTION*/
 .contacts-section {
   background-color: #ffffff;
   height: 728px;

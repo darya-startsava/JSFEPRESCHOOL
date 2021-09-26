@@ -37,13 +37,16 @@ body {
   margin: 0;
 }
 
-button,
-.welcome-button {
+button {
   cursor: pointer;
+}
+
+.buy-now-button,
+.welcome-button {
   transition: background-color .5s;
 }
 
-button:hover,
+.buy-now-button:hover,
 .welcome-button:hover {
   background-color: #9d8665;
 }
@@ -462,11 +465,47 @@ button.video-button:hover {
   margin: 40px auto;
 }
 
+/* GALLERY SECTION */
+.container-gallery-inner-section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 36px;
+  row-gap: 24px;
+  height: 2980px;
+}
 
-/* TICKETS */
+.gallery-title {
+  margin-bottom: 75px;
+}
+
+.container-gallery-inner-section img:nth-child(1) {
+  margin-top: 55px;
+}
+
+.container-gallery-inner-section img:nth-child(11) {
+  margin-top: 55px;
+}
+
+.container-gallery-section {
+  height: 2053px;
+  overflow-y: hidden;
+  -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), transparent);
+  mask-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), transparent);
+}
+
+.gallery-section {
+  background-color: #030303;
+}
+
+.gallery-picture {
+  width: 456px;
+}
+/* TICKETS SECTION*/
 
 .tickets-section {
-  background-color: #030303;
+  background-color: #fff;
   height: 743px;
 }
 
@@ -492,7 +531,7 @@ button.video-button:hover {
   font-weight: bold;
   font-size: 28px;
   line-height: 33px;
-  color: #ffffff;
+  color: #030303;
 }
 
 .ticket-type-subtitle {
@@ -500,10 +539,10 @@ button.video-button:hover {
 }
 
 .tickets-text {
-  color: #ffffff !important;
+  color: #030303 !important;
   font-family: Roboto !important;
   font-style: normal !important;
-  font-weight: 200 !important;
+  font-weight: 300 !important;
   font-size: 22px !important;
 }
 
@@ -511,7 +550,7 @@ button.video-button:hover {
   display: block;
   position: relative;
   padding-left: 45px;
-  margin-bottom: 12px;
+  margin-bottom: 25px;
   cursor: pointer;
   font-size: 22px;
   -webkit-user-select: none;
@@ -519,7 +558,7 @@ button.video-button:hover {
   -ms-user-select: none;
   user-select: none;
   text-decoration: none;
-  color: #ffffff;
+  color: #030303;
   margin-left: -4px;
 }
 
@@ -531,13 +570,13 @@ button.video-button:hover {
 
 .checkmark {
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 15px;
-  width: 15px;
-  background-color: #000;
+  top: 5px;
+  left: 5px;
+  height: 13px;
+  width: 13px;
+  background-color: #fff;
   border-radius: 50%;
-  border: 2px solid #fff;
+  border: 2px solid #030303;
 }
 
 .radio-button:hover input ~ .checkmark {
@@ -545,7 +584,7 @@ button.video-button:hover {
 }
 
 .radio-button input:checked ~ .checkmark {
-  background-color: #000;
+  background-color: #fff;
 }
 
 .checkmark:after {
@@ -559,12 +598,12 @@ button.video-button:hover {
 }
 
 .radio-button .checkmark:after {
-  top: 3px;
-  left: 3px;
+  top: 2.5px;
+  left: 2.5px;
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: white;
+  background: #030303;
 }
 
 .amount-form {
@@ -575,11 +614,13 @@ button.video-button:hover {
 
 .amount-subtitle {
   text-align: right;
-  margin-bottom: -10px;
+  margin-bottom: -30px;
 }
 
 .tickets-text-age {
   text-align: left;
+  margin-top: 55px;
+  margin-bottom: 10px;
 }
 
 .number {
@@ -589,14 +630,13 @@ button.video-button:hover {
 }
 
 .button-quantity {
-  border: 3px solid #fff;
+  border: 4px solid #030303;
   width: 142px;
   height: 45px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: -8px;
-  margin-bottom: 34px;
+  margin-bottom: -45px;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
@@ -612,12 +652,13 @@ input[type="number"]::-webkit-inner-spin-button {
   font-size: 32px;
   line-height: 37px;
   text-align: center;
-  color: #ffffff;
+  color: #030303;
 }
 
 .buy-tickets-total {
   letter-spacing: 1.65px;
   line-height: 50px;
+  margin-top: 90px;
 }
 
 .buy-now-button {
@@ -630,12 +671,14 @@ input[type="number"]::-webkit-inner-spin-button {
   line-height: 26px;
   text-align: center;
   letter-spacing: 2px;
-  color: #000000;
-  background-color: #ffffff;
+  color: #fff;
+  background-color: #030303;
   float: right;
   margin-top: 18px;
+  border: none;
 }
 
+/* CONTACTS SECTION*/
 .contacts-section {
   background-color: #ffffff;
   height: 728px;

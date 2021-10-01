@@ -13,11 +13,11 @@
 <body>
     <header>
         <div class="container header-container">
-            <div>
-                <span class="logo"> <img src=assets/svg/logo.svg alt="logo"> </span>
-                <span> <img src=assets/svg/louvre.svg alt="louvre"> </span>
+            <div class="container container-logo">
+                <span class="logo"> <img src=assets/svg/logo.svg alt="logo"class="logo-img"> </span>
+                <span> <img src=assets/svg/louvre.svg alt="louvre" class="louvre-img"> </span>
             </div>
-            <nav>
+            <nav class="container nav-adaptive">
                 <ul>
                     <li><a href="#visiting">Visiting</a></li>
                     <li><a href="#explore">Explore</a></li>
@@ -30,20 +30,46 @@
         </div>
     </header>
     <main>
-        <section id="welcome" class="welcome-section welcome-background">
-            <div class=" container welcome-slider">
-                <div class=" welcome-title">
-                    <h1>Louvre</h1>
-                    <h2 class="section-title-dark">Welcome</h2>
-                    <h2 class="section-title-dark">to the Louvre</h2>
-                    <p class="welcome-text">From the castle to the museum</p>
-                    <a href="tours/tour1.html" target="_blank" class="welcome-button">Discover the Louvre</a>
-                </div>
-                <div class="welcome-slider-buttons">
-                    <img src='assets/img/slider-picture.png' alt="slider-picture">
+        <section id="welcome" class="welcome-section">
+            <div class="container welcome-container">
+                <div class="welcome-main">
+                    <div class="welcome-left">
+                        <div class=" welcome-title">
+                            <h1>Louvre</h1>
+                            <h2 class="section-title-dark title-dark-adaptive">Welcome</h2>
+                            <h2 class="section-title-dark title-dark-adaptive">to the Louvre</h2>
+                            <p class="welcome-text">From the castle to the museum</p>
+                            <a href="tours/tour1.html" target="_blank" class="welcome-button">Discover the Louvre</a>
+                        </div>
+                    </div>
+                    <div class="slider-picture">
+                        <img src="./assets/img/background.jpg" alt="" class="slider-picture-img">
+                        <img src="./assets/img/mona-lisa-slider.jpg" alt="" class="first-slider-picture-img">
+                        <div class="slider-buttons-container">
+                            <div class="welcome-slider-buttons">
+                                <div class="slider-numbers">
+                                    <div class="slider-counter">01</div>
+                                    <div class="slider-counter">|</div>
+                                    <div class="slider-counter slider-counter-last-item">05</div>
+                                </div>
+                                <div class="slider-bullets">
+                                    <div class="slider-bullet"><img src="assets/svg/slider-bullet.svg" alt=""></div>
+                                    <div class="slider-bullet"><img src="assets/svg/slider-bullet.svg" alt=""></div>
+                                    <div class="slider-bullet"><img src="assets/svg/slider-bullet.svg" alt=""></div>
+                                    <div class="slider-bullet"><img src="assets/svg/slider-bullet.svg" alt=""></div>
+                                    <div class="slider-bullet"><img src="assets/svg/slider-bullet.svg" alt=""></div>
+                                </div>
+                                <div class="slider-arrows">
+                                    <div class="arrow-left"><img src="assets/svg/arrow-left.svg" alt=""></div>
+                                    <div class="slider-right"><img src="assets/svg/arrow-right.svg" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+        
         <section class="visiting-section" id="visiting">
             <div class="container">
                 <h2 class="section-title underline-title">Virtual tour</h2>
@@ -247,8 +273,8 @@
                     <h3 class="contacts-section-subtitle contacts-section-subtitle-first">Palais Royal </h3>
                     <h3 class="contacts-section-subtitle">Musee du Louvre</h3>
                     <p class="contacts-section-text contacts-section-text-first">address:75001 Paris, France</p>
-                    <a href="tel:+330140205050" class="contacts-section-text">phone:+33(0) 1 40 20 50 50</a>
-                        <a href="mailto:info@louvre.fr" class="contacts-section-text">mail:info@louvre.fr</a>
+                    <p><a href="tel:+330140205050" class="contacts-section-text">phone:+33(0) 1 40 20 50 50</a></p>
+                    <p><a href="mailto:info@louvre.fr" class="contacts-section-text">mail:info@louvre.fr</a></p>
                 </div>
             </div>
         </section>

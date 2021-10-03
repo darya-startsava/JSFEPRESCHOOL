@@ -261,9 +261,10 @@ h1 {
 /* VISITING SECTION */
 .visiting-section {
   background-color: #ffffff;
-  height: 1150px;
+  height: auto;
+  width: 100%;
   margin-top: 85px;
-  margin-bottom: 40px;
+  margin-bottom: 52px;
 }
 
 .section-title {
@@ -366,8 +367,8 @@ h1 {
   background-color: #710707;
 }
 
-
 /* EXPLORE SECTION */
+
 .container-explore-section {
   display: flex;
   justify-content: space-between;
@@ -376,6 +377,10 @@ h1 {
 .explore-section {
   background-color: #030303;
   height: 715px;
+}
+
+.explore-section-left {
+  width: calc(100% - 720px);
 }
 
 .description-text {
@@ -394,7 +399,7 @@ h1 {
 }
 
 #underline-title {
-  width: 660px;
+  width: 92%;
 }
 
 .yellow {
@@ -403,16 +408,20 @@ h1 {
 
 .explorer-section-image {
   margin-top: 15px;
+  width: 720px;
 }
 
 .container-explorer-section-image {
   position: relative;
+  width: 50%;
+  left: calc(60% - 864px);
 }
 
 .explorer-slider {
   position: absolute;
-  left: 420px;
-  top: 13px;
+  left: calc(55% + 23px);
+  top: calc(1% + 8px);
+  height: 700px;
 }
 
 /* VIDEO SECTION */
@@ -1097,6 +1106,11 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 
   /* VISITING SECTION 1024PX */
+
+  .visiting-section {
+    margin-bottom: 5px;
+  }
+
   .section-title {
     font-size: 50px;
     line-height: 50px;
@@ -1150,7 +1164,7 @@ input[type="number"]::-webkit-inner-spin-button {
   .card-text {
     font-size: 16px;
     line-height: 19px;
-    padding-bottom: 46px;
+    padding-bottom: 43px;
   }
 
   .underline-h3::after {
@@ -1160,6 +1174,62 @@ input[type="number"]::-webkit-inner-spin-button {
 
   .link:hover .underline-h3::after {
     width: 330px;
+  }
+
+  /* EXPLORE SECTION 1024PX*/
+
+  .explore-section {
+    height: auto;
+    padding-left: 20px;
+  }
+
+  .container-explore-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .explore-section-left {
+    width: 100%;
+  }
+
+  .section-explore-title {
+    margin-top: -22px;
+    margin-bottom: 75px;
+  }
+
+  #underline-title {
+    width: 98%;
+  }
+
+  .explore-section-left .underline-title:after {
+    bottom: -15px;
+  }
+
+  .description-text {
+    font-size: 20px;
+    margin-bottom: -21px;
+    padding-right: 45px;
+  }
+
+  .description-text:last-child {
+    display: none;
+  }
+
+  .container-explorer-section-image {
+    width: 71.5%;
+    margin-bottom: -18px;
+    margin-top: 65px;
+    margin-left: -19px;
+    left: 0;
+  }
+
+  .explorer-section-image {
+    width: 100%;
+  }
+
+  .explorer-slider {
+    height: 97%;
+    left: calc(55% + 23px);
   }
 }
 
@@ -1248,6 +1318,11 @@ input[type="number"]::-webkit-inner-spin-button {
 
   /* VISITING SECTION 768PX */
 
+  .visiting-section {
+    height: auto;
+    margin-bottom: 40px;
+  }
+
   .section-title {
     font-size: 40px;
     line-height: 60px;
@@ -1292,6 +1367,31 @@ input[type="number"]::-webkit-inner-spin-button {
 
   .underline-h3::after {
     bottom: -13px;
+  }
+
+  /* EXPLORE SECTION 768PX*/
+
+  .explore-section {
+    padding-top: 92px;
+  }
+
+  .explore-section-left .underline-title:after {
+    bottom: -53px;
+  }
+
+  .description-text {
+    display: none;
+  }
+
+  .container-explorer-section-image {
+    width: 97.5%;
+    margin-bottom: -39px;
+    margin-top: -1px;
+    margin-left: -18px;
+  }
+
+  .explorer-slider {
+    left: calc(55% + 20px);
   }
 }
 
@@ -1365,31 +1465,17 @@ input[type="number"]::-webkit-inner-spin-button {
 
   /* VISITING SECTION 420PX */
 
+  .visiting-section {
+    margin-bottom: 1px;
+  }
+
   .section-title {
     font-size: 28px;
     line-height: 40px;
-    margin-top: -45px;
   }
 
   .underline-title::after {
-    bottom: -23px;
     max-width: 380px;
-    width: 100%;
-  }
-
-  .virtual-tour-container {
-    margin-top: 63px;
-    margin-left: 30px;
-    margin-right: 30px;
-  }
-
-  .link {
-    width: 280px;
-  }
-
-  .card-image {
-    width: 280px;
-    height: 180px;
   }
 
   .card-title {
@@ -1402,14 +1488,35 @@ input[type="number"]::-webkit-inner-spin-button {
   .card-subtitle {
     font-size: 16px;
     line-height: 19px;
-    margin-top: 0px;
   }
 
   .card-text {
     padding-bottom: 22px;
   }
 
-  .underline-h3::after {
-    bottom: -13px;
+  /* EXPLORE SECTION 420PX*/
+
+  .section-explore-title {
+    margin-top: -32px;
+  }
+
+  .explore-section-left .underline-title:after {
+    bottom: -43px;
+  }
+
+  .explorer-section-image {
+    margin-top: 14px;
+  }
+
+  .container-explorer-section-image {
+    width: 95%;
+    margin-top: -8px;
+    margin-left: -20px;
+  }
+
+  .explorer-slider {
+    top: calc(1% + 11px);
+    left: calc(55% + 11px);
+    height: 95%;
   }
 }

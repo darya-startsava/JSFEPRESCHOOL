@@ -136,7 +136,6 @@
                 </div>
             </div>
         </section>
-        
         <section class="section video-section" id="video">
             <div class="container">
                 <div class="video-title-container">
@@ -147,31 +146,46 @@
                 <video class="video" poster="assets/img/video-journay.png" preload>
                     <source src="https://www.youtube.com/embed/zp1BXPX8jcU">
                 </video>
-                <button aria-label="Play" class="video-button-main"></button>
+                <div class="video-button-main-container">
+                    <button aria-label="Play" class="video-button-main"></button>
+                    <button aria-label="Play" class="video-button-main-1024"></button>
+                    <button aria-label="Play" class="video-button-main-768"></button>
+                    <button aria-label="Play" class="video-button-main-420"></button>
+                </div>
                 <div class="video-nav">
                     <button aria-label="Play" class="video-button button-play"></button>
-                    <input aria-label="Progress bar" type="range" class="progress-bar">
+                    <input aria-label="Progress bar" type="range" class="progress-bar" value="54" min="0" max="100"
+                        step="1">
                     <button aria-label="Button volume" class="video-button button-volume"></button>
-                    <input aria-label="Volume control" type="range" class="volume-control">
+                    <input aria-label="Volume control" type="range" class="volume-control" value="22" min="0" max="50"
+                        step="1">
                     <button aria-label="Full screen video" class="video-button button-full-screen"></button>
                 </div>
                 <div class="video-slider-container">
-                    <iframe width="452" height="254" src="https://www.youtube.com/embed/aWmJ5DgyWPI"
+                    <iframe src="https://www.youtube.com/embed/aWmJ5DgyWPI"
                         title="YouTube video player" loading="lazy"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
-                    <iframe width="452" height="254" src="https://www.youtube.com/embed/Vi5D6FKhRmo"
+                    <iframe src="https://www.youtube.com/embed/Vi5D6FKhRmo"
                         title="YouTube video player" loading="lazy"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
-                    <iframe width="452" height="254" src="https://www.youtube.com/embed/NOhDysLnTvY"
+                    <iframe src="https://www.youtube.com/embed/NOhDysLnTvY"
                         title="YouTube video player" loading="lazy"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
                 </div>
-                <div class="video-slider-points"></div>
+                <div class="video-slider-points">
+                    <div class="video-slider-bullet"><img src="assets/svg/double-arrow-left.svg" alt=""></div>
+                    <div class="video-slider-bullet"><img src="assets/svg/video-slider-bullet.svg" alt=""></div>
+                    <div class="video-slider-bullet"><img src="assets/svg/video-slider-bullet.svg" alt=""></div>
+                    <div class="video-slider-bullet"><img src="assets/svg/video-slider-bullet.svg" alt=""></div>
+                    <div class="video-slider-bullet"><img src="assets/svg/video-slider-bullet.svg" alt=""></div>
+                    <div class="video-slider-bullet"><img src="assets/svg/double-arrow-right.svg" alt=""></div>
+                </div>
             </div>
         </section>
+
         <section class="section gallery-section" id="gallery">
             <div class="container container-gallery-section">
                 <h2 class="section-title-dark gallery-title">Art gallery</h2>
@@ -321,10 +335,10 @@
 
         </div>
     </footer>
-    <div class="popup-overlay"></div>
-    <script src="./js/gallery.js"></script>
-    <script src="./js/booking-tickets.js"></script>
-    <script src="./js/self-review.js"></script>
+        <div class="popup-overlay"></div>
+        <script src="./js/gallery.js"></script>
+        <script src="./js/booking-tickets.js"></script>
+        <script src="./js/self-review.js"></script>
 </body>
 
 </html>

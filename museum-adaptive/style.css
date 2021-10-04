@@ -581,9 +581,12 @@ button.video-button:hover {
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  column-gap: 36px;
+  column-gap: 2.8%;
   row-gap: 24px;
   height: 2956px;
+  width: 96%;
+  max-width: 1440px;
+  margin-left: 3px;
 }
 
 .gallery-title {
@@ -611,8 +614,10 @@ button.video-button:hover {
 }
 
 .gallery-picture {
-  width: 456px;
+  width: 32.7%;
+  max-width: 456px;
 }
+
 /* TICKETS SECTION*/
 
 .tickets-section {
@@ -1261,6 +1266,7 @@ input[type="number"]::-webkit-inner-spin-button {
     height: auto;
     padding-left: 20px;
     padding-right: 20px;
+    padding-bottom: 26px;
   }
 
   .section-video-text {
@@ -1307,6 +1313,39 @@ input[type="number"]::-webkit-inner-spin-button {
   .video-slider-container iframe {
     width: 300px;
     height: 170px;
+  }
+
+  /* GALLERY SECTION 1024PX */
+  .gallery-section {
+    padding-left: 20px;
+    padding-top: 53px;
+    height: auto;
+  }
+
+  .gallery-title {
+    margin-bottom: 53px;
+  }
+
+  .container-gallery-section {
+    height: 1333px;
+  }
+
+  .container-gallery-inner-section {
+    column-gap: 3.7%;
+    height: 2102px;
+    margin-left: 1px;
+  }
+
+  .gallery-picture {
+    width: 31.5%;
+  }
+
+  .container-gallery-inner-section img:nth-child(1) {
+    margin-top: 50px;
+  }
+
+  .container-gallery-inner-section img:nth-child(11) {
+    margin-top: 50px;
   }
 }
 
@@ -1477,6 +1516,10 @@ input[type="number"]::-webkit-inner-spin-button {
 
   /* VIDEO SECTION 768PX*/
 
+  .video-section {
+    padding-bottom: 63px;
+  }
+
   .video {
     margin-top: -15px;
   }
@@ -1511,6 +1554,26 @@ input[type="number"]::-webkit-inner-spin-button {
 
   .video-slider-points {
     margin: 18px auto;
+  }
+
+  /* GALLERY SECTION 768PX */
+
+  .gallery-title {
+    margin-bottom: 71px;
+  }
+
+  .container-gallery-section {
+    height: 1077px;
+    padding-top: 15px;
+  }
+
+  .container-gallery-inner-section {
+    margin-left: -2px;
+    max-width: 768px;
+  }
+
+  .gallery-picture {
+    width: 49%;
   }
 }
 
@@ -1649,6 +1712,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
   .video-section {
     padding-top: 82px;
+    padding-bottom: 5px;
   }
 
   .video {
@@ -1694,5 +1758,28 @@ input[type="number"]::-webkit-inner-spin-button {
 
   .video-slider-bullet img {
     width: 9px;
+  }
+
+  /* GALLERY SECTION 420PX */
+
+  .gallery-section {
+    padding-top: 46px;
+  }
+
+  .gallery-title {
+    margin-bottom: 59px;
+  }
+
+  .container-gallery-section {
+    height: 621px;
+  }
+
+  .container-gallery-inner-section {
+    column-gap: 6%;
+    margin-left: -4px;
+  }
+
+  .gallery-picture {
+    width: 46.3%;
   }
 }

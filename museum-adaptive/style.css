@@ -948,9 +948,9 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .contacts-section {
   background-color: #ffffff;
-  height: 728px;
+  height: auto;
   margin-top: 10px;
-  margin-bottom: 75px;
+  margin-bottom: -2px;
 }
 
 .map-image {
@@ -1443,6 +1443,8 @@ input[type="number"]::-webkit-inner-spin-button {
   /* CONTACTS SECTION 1024PX*/
 
   .contacts-section {
+    height: auto;
+    margin-bottom: -13px;
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -1479,6 +1481,70 @@ input[type="number"]::-webkit-inner-spin-button {
   .contacts-section-text-first {
     margin-top: 43px;
     margin-bottom: -10px;
+  }
+  /* FOOTER 1024PX */
+
+  .footer-section {
+    height: auto;
+    padding-right: 18px;
+    padding-left: 18px;
+    margin-top: -13px;
+  }
+
+  .footer-container {
+    margin-top: -25px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .underline-footer::after {
+    bottom: -10px;
+  }
+
+  .footer-logo {
+    display: flex;
+    margin-top: 0px;
+    height: 50px;
+    width: 12%;
+  }
+
+  .footer-nav {
+    display: flex;
+    column-gap: 120px;
+    margin-left: 14px;
+  }
+
+  .footer-nav ul {
+    float: none;
+    margin-left: 0;
+    padding: 0;
+  }
+
+  .social-nav {
+    width: 35%;
+    margin-left: -14px;
+  }
+
+  .social-nav ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .social-nav li {
+    margin-left: 0;
+  }
+
+  .social-nav li img {
+    margin: 16px auto;
+  }
+
+  .footer-second-container {
+    margin-top: 36px;
+    padding-bottom: 25px;
+    padding-left: 5px;
   }
 }
 
@@ -1764,6 +1830,10 @@ input[type="number"]::-webkit-inner-spin-button {
 
   /* CONTACTS SECTION 768PX*/
 
+  .contacts-section {
+    padding-bottom: 81px;
+  }
+
   .map-image-1024 {
     display: none;
   }
@@ -1789,8 +1859,18 @@ input[type="number"]::-webkit-inner-spin-button {
   .contacts-section-text {
     font-size: 18px;
   }
-}
 
+  /* FOOTER 768PX */
+
+  .footer-logo {
+    margin-top: -12px;
+  }
+
+  .footer-nav a,
+  .footer-second-container {
+    font-size: 18px;
+  }
+}
 /* MEDIA 420PX*/
 
 @media (max-width: 420px) {
@@ -2042,6 +2122,10 @@ input[type="number"]::-webkit-inner-spin-button {
 
   /* CONTACTS SECTION 420PX*/
 
+  .contacts-section {
+    margin-bottom: -40px;
+  }
+
   .map-image-768 {
     display: none;
   }
@@ -2074,4 +2158,6 @@ input[type="number"]::-webkit-inner-spin-button {
     margin-top: 43px;
     margin-bottom: -14px;
   }
+
+  /* FOOTER 420PX */
 }

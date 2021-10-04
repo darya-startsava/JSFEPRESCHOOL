@@ -622,7 +622,7 @@ button.video-button:hover {
 
 .tickets-section {
   background-color: #fff;
-  height: 743px;
+  height: auto;
 }
 
 .section-tickets-title {
@@ -826,7 +826,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .popup {
   z-index: 10;
   position: fixed;
-  left: -300%;
+  left: -1000%;
   top: calc(50% - 422px);
   width: 1440px;
   height: 845px;
@@ -932,6 +932,20 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 /* CONTACTS SECTION*/
+
+.map-container {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 13.9%;
+  padding-top: 22px;
+  width: 100%;
+  max-width: 1440px;
+}
+
+.map-container-left {
+  order: 1;
+}
+
 .contacts-section {
   background-color: #ffffff;
   height: 728px;
@@ -940,10 +954,18 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .map-image {
-  width: 960px;
-  height: 620px;
-  float: right;
-  margin-top: -23px;
+  order: 2;
+  width: 100%;
+  max-width: 960px;
+  height: 100%;
+  max-height: 620px;
+  padding-top: 14px;
+}
+
+.map-image-1024,
+.map-image-768,
+.map-image-420 {
+  display: none;
 }
 
 .contacts-section-subtitle {
@@ -965,10 +987,6 @@ input[type="number"]::-webkit-inner-spin-button {
   color: #000000;
   letter-spacing: 0.2px;
   padding-bottom: 5px;
-}
-
-.contacts-section-subtitle-first {
-  margin-top: 115px;
 }
 
 .contacts-section-text-first {
@@ -1371,6 +1389,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
   .buy-tickets {
     margin-top: -7px;
+    margin-bottom: -15px;
   }
 
   .buy-tickets-image-1920 {
@@ -1404,7 +1423,7 @@ input[type="number"]::-webkit-inner-spin-button {
   .buy-tickets-total {
     letter-spacing: 3px;
     line-height: 50px;
-    margin-top: 58px;
+    margin-top: 68px;
   }
 
   .buy-tickets-subtitle {
@@ -1412,13 +1431,54 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 
   .buy-now-button {
-    margin-top: 44px;
+    margin-top: 33px;
   }
 
   .button-quantity {
     border: 3px solid #030303;
     width: 168px;
     height: 44px;
+  }
+
+  /* CONTACTS SECTION 1024PX*/
+
+  .contacts-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .map-image {
+    display: none;
+  }
+
+  .map-image-1024 {
+    display: block;
+    order: 2;
+    width: 100%;
+    max-width: 694px;
+    height: 100%;
+    max-height: 454px;
+    padding-top: 16px;
+  }
+
+  .map-container {
+    column-gap: 3.6%;
+    padding-top: 35px;
+  }
+
+  .contacts-section-subtitle {
+    font-size: 24px;
+    padding-top: 1px;
+  }
+
+  .contacts-section-text {
+    font-size: 20px;
+    margin-top: -10px;
+  }
+
+  .contacts-section-text-first {
+    margin-top: 43px;
+    margin-bottom: -10px;
   }
 }
 
@@ -1659,6 +1719,10 @@ input[type="number"]::-webkit-inner-spin-button {
     margin-bottom: 70px;
   }
 
+  .buy-tickets {
+    margin-bottom: -35px;
+  }
+
   .buy-tickets-image-1024 {
     display: none;
   }
@@ -1692,6 +1756,38 @@ input[type="number"]::-webkit-inner-spin-button {
 
   .buy-now-button {
     margin-top: 3px;
+  }
+
+  .parallax {
+    height: 300px;
+  }
+
+  /* CONTACTS SECTION 768PX*/
+
+  .map-image-1024 {
+    display: none;
+  }
+
+  .map-image-768 {
+    display: block;
+    order: 2;
+    width: 100%;
+    max-width: 728px;
+    height: 100%;
+    max-height: 476px;
+    padding-top: 16px;
+  }
+
+  .map-container {
+    padding-top: 15px;
+  }
+
+  .contacts-section-subtitle {
+    font-size: 20px;
+  }
+
+  .contacts-section-text {
+    font-size: 18px;
   }
 }
 
@@ -1942,5 +2038,40 @@ input[type="number"]::-webkit-inner-spin-button {
 
   .buy-now-button {
     font-size: 16px;
+  }
+
+  /* CONTACTS SECTION 420PX*/
+
+  .map-image-768 {
+    display: none;
+  }
+
+  .map-image-420 {
+    display: block;
+    order: 2;
+    width: 100%;
+    max-width: 380px;
+    height: 100%;
+    max-height: 248px;
+    padding-top: 16px;
+  }
+
+  .map-container {
+    padding-top: 30px;
+  }
+
+  .contacts-section-subtitle {
+    font-size: 16px;
+    padding-top: 0px;
+  }
+
+  .contacts-section-text {
+    font-size: 16px;
+    padding-bottom: 0px;
+  }
+
+  .contacts-section-text-first {
+    margin-top: 43px;
+    margin-bottom: -14px;
   }
 }

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/css/splide.min.css">
 </head>
 
 <body>
@@ -48,17 +49,37 @@
                         </div>
                     </div>
                     <div class="slider-picture">
-                        <img src="./assets/img/background.jpg" alt="" class="slider-picture-img">
+                        <div class="splide">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide">
+                                        <img src="./assets/img/welcome-slider/1.jpg" alt="" class="slider-picture-img">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="./assets/img/welcome-slider/2.jpg" alt="" class="slider-picture-img">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="./assets/img/welcome-slider/3.jpg" alt="" class="slider-picture-img">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="./assets/img/welcome-slider/4.jpg" alt="" class="slider-picture-img">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="./assets/img/welcome-slider/5.jpg" alt="" class="slider-picture-img">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                         <img src="./assets/img/mona-lisa-slider.jpg" alt="" class="first-slider-picture-img">
                         <div class="slider-buttons-container">
                             <div class="welcome-slider-buttons">
                                 <div class="slider-numbers">
-                                    <div class="slider-counter">01</div>
+                                    <div id="slider-counter" class="slider-counter">01</div>
                                     <div class="slider-counter">|</div>
                                     <div class="slider-counter slider-counter-last-item">05</div>
                                 </div>
                                 <div class="slider-bullets">
-                                    <div class="slider-bullet"><img src="assets/svg/slider-bullet.svg" alt=""></div>
+                                    <div class="slider-bullet active"><img src="assets/svg/slider-bullet.svg" alt=""></div>
                                     <div class="slider-bullet"><img src="assets/svg/slider-bullet.svg" alt=""></div>
                                     <div class="slider-bullet"><img src="assets/svg/slider-bullet.svg" alt=""></div>
                                     <div class="slider-bullet"><img src="assets/svg/slider-bullet.svg" alt=""></div>
@@ -66,7 +87,7 @@
                                 </div>
                                 <div class="slider-arrows">
                                     <div class="arrow-left"><img src="assets/svg/arrow-left.svg" alt=""></div>
-                                    <div class="slider-right"><img src="assets/svg/arrow-right.svg" alt=""></div>
+                                    <div class="arrow-right"><img src="assets/svg/arrow-right.svg" alt=""></div>
                                 </div>
                             </div>
                         </div>
@@ -348,6 +369,8 @@
     <script src="./js/menu.js"></script>
     <script src="./js/booking-tickets.js"></script>
     <script src="./js/self-review.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/js/splide.min.js"></script>
+    <script src="./js/welcome-slider.js"></script>
 </body>
 
 </html>

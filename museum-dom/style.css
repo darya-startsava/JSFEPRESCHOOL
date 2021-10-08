@@ -190,6 +190,7 @@ h1 {
   width: 100%;
   margin: 0 auto;
   height: auto;
+  -webkit-mask-image: linear-gradient(270deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), transparent);
 }
 
 .slider-picture-img {
@@ -215,6 +216,7 @@ h1 {
 .welcome-title {
   position: absolute;
   padding-top: 150px;
+  z-index: 1;
 }
 
 .welcome-button {
@@ -244,6 +246,22 @@ h1 {
   position: absolute;
   margin-top: -80px;
   right: 0;
+}
+
+.arrow-left,
+.arrow-right,
+.slider-bullet {
+  cursor: pointer;
+  transition: filter .5s;
+}
+
+.slider-bullet.active {
+    filter: invert(56%) sepia(35%) saturate(334%) hue-rotate(356deg) brightness(89%) contrast(87%);
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+  filter: invert(56%) sepia(35%) saturate(334%) hue-rotate(356deg) brightness(89%) contrast(87%);
 }
 
 .welcome-slider-buttons {

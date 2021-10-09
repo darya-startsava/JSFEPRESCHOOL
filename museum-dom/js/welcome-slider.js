@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var splide = new Splide('.splide', {
+    var splide = new Splide('.splide-welcome', {
         type: 'loop',
         arrows: false,
         pagination: false
@@ -15,8 +15,10 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     }
 
-    splide.on( 'move', () => {const index = splide.index;
-        updateBullets(index);} )
+    splide.on('move', () => {
+        const index = splide.index;
+        updateBullets(index);
+    })
 
     const arrowLeft = document.querySelector(".arrow-left");
     const arrowRight = document.querySelector(".arrow-right");
@@ -39,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function updateBullets(i) {
         sliderBullets.forEach((item, itemIndex) => item.classList.remove("active"))
         sliderBullets[i].classList.add("active");
-        document.getElementById("slider-counter").innerHTML=`0${i+1}`;
+        document.getElementById("slider-counter").innerHTML = `0${i + 1}`;
     }
 
 })

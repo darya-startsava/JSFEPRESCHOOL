@@ -9,6 +9,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/css/splide.min.css">
+    <!-- <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-video@0.5.0/dist/css/splide-extension-video.min.css"> -->
 </head>
 
 <body>
@@ -49,7 +51,7 @@
                         </div>
                     </div>
                     <div class="slider-picture">
-                        <div class="splide">
+                        <div class="splide splide-welcome">
                             <div class="splide__track">
                                 <ul class="splide__list">
                                     <li class="splide__slide">
@@ -79,7 +81,8 @@
                                     <div class="slider-counter slider-counter-last-item">05</div>
                                 </div>
                                 <div class="slider-bullets">
-                                    <div class="slider-bullet active"><img src="assets/svg/slider-bullet.svg" alt=""></div>
+                                    <div class="slider-bullet active"><img src="assets/svg/slider-bullet.svg" alt="">
+                                    </div>
                                     <div class="slider-bullet"><img src="assets/svg/slider-bullet.svg" alt=""></div>
                                     <div class="slider-bullet"><img src="assets/svg/slider-bullet.svg" alt=""></div>
                                     <div class="slider-bullet"><img src="assets/svg/slider-bullet.svg" alt=""></div>
@@ -188,23 +191,51 @@
                     <button aria-label="Full screen video" class="video-button button-full-screen"></button>
                 </div>
                 <div class="video-slider-container">
-                    <iframe src="https://www.youtube.com/embed/aWmJ5DgyWPI" title="YouTube video player" loading="lazy"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                    <iframe src="https://www.youtube.com/embed/Vi5D6FKhRmo" title="YouTube video player" loading="lazy"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                    <iframe src="https://www.youtube.com/embed/NOhDysLnTvY" title="YouTube video player" loading="lazy"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+                    <div class="splide splide-video">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide">
+                                    <iframe src="https://www.youtube.com/embed/zp1BXPX8jcU" title="YouTube video player"
+                                        loading="lazy"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                </li>
+                                <li class="splide__slide">
+                                    <iframe src="https://www.youtube.com/embed/Vi5D6FKhRmo" title="YouTube video player"
+                                        loading="lazy"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                </li>
+                                <li class="splide__slide">
+                                    <iframe src="https://www.youtube.com/embed/NOhDysLnTvY" title="YouTube video player"
+                                        loading="lazy"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                </li>
+                                <li class="splide__slide">
+                                    <iframe src="https://www.youtube.com/embed/aWmJ5DgyWPI" title="YouTube video player"
+                                        loading="lazy"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                </li>
+                                <li class="splide__slide">
+                                    <iframe src="https://www.youtube.com/embed/2OR0OCr6uRE" title="YouTube video player"
+                                        loading="lazy"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div class="video-slider-points">
-                    <div class="video-slider-bullet"><img src="assets/svg/double-arrow-left.svg" alt=""></div>
+                    <div class="video-slider-arrow-left"><img src="assets/svg/double-arrow-left.svg" alt=""></div>
+                    <div class="video-slider-bullet active"><img src="assets/svg/video-slider-bullet.svg" alt=""></div>
                     <div class="video-slider-bullet"><img src="assets/svg/video-slider-bullet.svg" alt=""></div>
                     <div class="video-slider-bullet"><img src="assets/svg/video-slider-bullet.svg" alt=""></div>
                     <div class="video-slider-bullet"><img src="assets/svg/video-slider-bullet.svg" alt=""></div>
                     <div class="video-slider-bullet"><img src="assets/svg/video-slider-bullet.svg" alt=""></div>
-                    <div class="video-slider-bullet"><img src="assets/svg/double-arrow-right.svg" alt=""></div>
+                    <div class="video-slider-arrow-right"><img src="assets/svg/double-arrow-right.svg" alt=""></div>
                 </div>
             </div>
         </section>
@@ -371,6 +402,9 @@
     <script src="./js/self-review.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/js/splide.min.js"></script>
     <script src="./js/welcome-slider.js"></script>
+    <!-- <script
+        src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-video@0.5.0/dist/js/splide-extension-video.min.js"></script> -->
+    <script src="./js/video-slider.js"></script>
 </body>
 
 </html>

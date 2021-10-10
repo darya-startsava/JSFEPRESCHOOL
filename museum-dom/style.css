@@ -493,7 +493,7 @@ h1 {
 .video-section {
   background-color: #ffffff;
   padding-top: 87px;
-  height: 1233px;
+  height: auto;
 }
 
 .video-nav {

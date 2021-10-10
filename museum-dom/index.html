@@ -172,8 +172,8 @@
                     <p class="section-video-text">Enter and visit one of the most famous museums in the world and enjoy
                         masterpieces such as Mona Lisa or Hammurabi's Code</p>
                 </div>
-                <video class="video" poster="assets/img/video-journay.jpg" preload>
-                    <source src="">
+                <video id="video-main" class="video" type="video/mp4" poster="assets/img/video-slider-posters/poster0.jpg" controls preload>
+                    <source id="source" src="https://github.com/rolling-scopes-school/stage1-tasks/blob/museum/assets/video/video0.mp4?raw=true">
                 </video>
                 <div class="video-button-main-container">
                     <button aria-label="Play" class="video-button-main"></button>
@@ -195,34 +195,19 @@
                         <div class="splide__track">
                             <ul class="splide__list">
                                 <li class="splide__slide">
-                                    <iframe src="https://www.youtube.com/embed/zp1BXPX8jcU" title="YouTube video player"
-                                        loading="lazy"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen></iframe>
+                                    <div id="ytplayer1" class="yt-player"></div>
                                 </li>
                                 <li class="splide__slide">
-                                    <iframe src="https://www.youtube.com/embed/Vi5D6FKhRmo" title="YouTube video player"
-                                        loading="lazy"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen></iframe>
+                                    <div id="ytplayer2" class="yt-player"></div>
                                 </li>
                                 <li class="splide__slide">
-                                    <iframe src="https://www.youtube.com/embed/NOhDysLnTvY" title="YouTube video player"
-                                        loading="lazy"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen></iframe>
+                                    <div id="ytplayer3" class="yt-player"></div>
                                 </li>
                                 <li class="splide__slide">
-                                    <iframe src="https://www.youtube.com/embed/aWmJ5DgyWPI" title="YouTube video player"
-                                        loading="lazy"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen></iframe>
+                                    <div id="ytplayer4" class="yt-player"></div>
                                 </li>
                                 <li class="splide__slide">
-                                    <iframe src="https://www.youtube.com/embed/2OR0OCr6uRE" title="YouTube video player"
-                                        loading="lazy"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen></iframe>
+                                    <div id="ytplayer5" class="yt-player"></div>
                                 </li>
                             </ul>
                         </div>
@@ -402,6 +387,7 @@
     <script src="./js/self-review.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/js/splide.min.js"></script>
     <script src="./js/welcome-slider.js"></script>
+    <script src="./js/video-player.js"></script>
     <!-- <script
         src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-video@0.5.0/dist/js/splide-extension-video.min.js"></script> -->
     <script src="./js/video-slider.js"></script>

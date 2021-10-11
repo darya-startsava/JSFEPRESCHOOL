@@ -57,6 +57,13 @@ function initSlider() {
 
         video.setAttribute('poster', `assets/img/video-slider-posters/poster${i}.jpg`);
         source.setAttribute('src', `https://github.com/rolling-scopes-school/stage1-tasks/blob/museum/assets/video/video${i}.mp4?raw=true`);
+        buttonsInitialState();
+        function buttonsInitialState() {
+            bigPlayButton.classList.remove('hidden');
+            playButton.classList.remove('hidden');
+            pauseButton.classList.add('hidden');
+            seek.style.background = 'linear-gradient(to right, #710707 0%, #710707 0%, #C4C4C4 0%, #C4C4C4 100%)';
+        }
 
         video.load();
     }
@@ -87,7 +94,6 @@ function createPlayer(domId, videoId) {
 }
 
 function onYouTubeIframeAPIReady() {
-    console.log('onYouTubeIframeAPIReady')
 
     createPlayer('ytplayer1', 'zp1BXPX8jcU');
     createPlayer('ytplayer2', 'Vi5D6FKhRmo');
@@ -100,7 +106,7 @@ function onYouTubeIframeAPIReady() {
 }
 
 function onPlayerStateChange(event) {
-    console.log('onPlayerStateChange')
+
     if (event.data == YT.PlayerState.PLAYING) {
         players.forEach(p => {
             if (p.id !== event.target.id) {

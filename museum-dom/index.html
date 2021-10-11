@@ -9,6 +9,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/css/splide.min.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.css' rel='stylesheet' />
 </head>
 
 <body>
@@ -178,7 +179,7 @@
                     </video>
                     <button id="play-big" aria-label="Play" class="video-button-main"></button>
                     <div class="video-button-main-container">
-                        
+
                         <button aria-label="Play" class="video-button-main-1024"></button>
                         <button aria-label="Play" class="video-button-main-768"></button>
                         <button aria-label="Play" class="video-button-main-420"></button>
@@ -334,10 +335,11 @@
             <div class="container">
                 <h2 class="section-title underline-title">Contacts</h2>
                 <div class="map-container">
-                    <img src="assets/img/map.jpg" alt="map" class="map-image">
+                    <div id="map" class="map"></div>
+                    <!-- <img src="assets/img/map.jpg" alt="map" class="map-image">
                     <img src="assets/img/map1024.jpg" alt="map" class="map-image-1024">
                     <img src="assets/img/map768.jpg" alt="map" class="map-image-768">
-                    <img src="assets/img/map420.jpg" alt="map" class="map-image-420">
+                    <img src="assets/img/map420.jpg" alt="map" class="map-image-420"> -->
                     <div class="map-container-left">
                         <h3 class="contacts-section-subtitle contacts-section-subtitle-first">Palais Royal </h3>
                         <h3 class="contacts-section-subtitle">Musee du Louvre</h3>
@@ -398,6 +400,8 @@
     <script src="./js/welcome-slider.js"></script>
     <script src="./js/video-player.js"></script>
     <script src="./js/video-slider.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.js'></script>
+    <script src="./js/map.js"></script>
 </body>
 
 </html>

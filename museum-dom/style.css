@@ -482,14 +482,14 @@ h1 {
 }
 
 .video-container {
-    width: 1440px;
-    border-radius: 4px;
-    margin: 0 auto;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+  width: 1440px;
+  border-radius: 4px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .video {
   margin-top: 5px;
@@ -553,11 +553,11 @@ button.video-button:hover {
 }
 
 .button-volume-off {
-    background: url("assets/svg/video-button-mute-off.svg");
-    width: 36px;
-    height: 30px;
-    margin-left: 10px;
-  }
+  background: url("assets/svg/video-button-mute-off.svg");
+  width: 36px;
+  height: 30px;
+  margin-left: 10px;
+}
 
 .button-full-screen {
   background: url("assets/svg/fullscreen.svg");
@@ -567,17 +567,17 @@ button.video-button:hover {
 }
 
 .button-full-screen-exit {
-    background: url("assets/svg/fullscreen-exit.svg");
-    width: 36px;
-    height: 36px;
-    margin-right: -10px;
-  }
+  background: url("assets/svg/fullscreen-exit.svg");
+  width: 36px;
+  height: 36px;
+  margin-right: -10px;
+}
 
 .progress-bar {
   -webkit-appearance: none;
   width: 68.5%;
   height: 8px;
-  background: linear-gradient(to right, #710707 0%, #710707 0%, #C4C4C4 0%, #C4C4C4 100%);
+  background: linear-gradient(to right, #710707 0%, #710707 0%, #c4c4c4 0%, #c4c4c4 100%);
   border: none;
   outline: none;
   transition: background 450ms ease-in;
@@ -1025,11 +1025,18 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .map-container {
   display: flex;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
   column-gap: 13.9%;
   padding-top: 22px;
   width: 100%;
   max-width: 1440px;
+}
+
+.map {
+  width: 960px;
+  height: 620px;
+  margin-top: 13px;
 }
 
 .map-container-left {

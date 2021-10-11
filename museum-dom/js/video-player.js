@@ -157,20 +157,20 @@ videoContainer.addEventListener('fullscreenchange', updateFullscreenButton);
 
 // Hotkeys
 function keyboardShortcuts(event) {
-    const { key } = event;
-    switch (key) {
-        case 'm':
+    const { code } = event;
+    switch (code) {
+        case 'KeyM':
             buttonVolumeToggle();
             break;
-        case 'f':
+        case 'KeyF':
             toggleFullScreen();
             break;
-        case '&nbsp':
-            event.preventDefault()
+        case 'Space':
+            event.preventDefault();
             playButtonToggle();
             break;
     }
 }
 
-document.addEventListener('keyup', keyboardShortcuts);
+document.addEventListener('keydown', keyboardShortcuts);
 

@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+function initSlider() {
     var splide = new Splide('.splide-video', {
         type: 'loop',
         perPage: 3,
@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', function () {
         sliderBullets[i] = sliderBullets[i].addEventListener("click", () => {
             updateBullets(i);
             splide.go(i);
+            changeMainVideo(i);
+            stopPlayerWhenChangeSlide();
         })
     }
 
@@ -31,12 +33,16 @@ document.addEventListener('DOMContentLoaded', function () {
         splide.go('<');
         const index = splide.index;
         updateBullets(index);
+        changeMainVideo(index);
+        stopPlayerWhenChangeSlide();
     }
 
     function nextSlide() {
         splide.go('>');
         const index = splide.index;
         updateBullets(index);
+        changeMainVideo(index);
+        stopPlayerWhenChangeSlide();
     }
 
     function updateBullets(i) {
@@ -45,8 +51,24 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById("slider-counter").innerHTML = `0${i + 1}`;
     }
 
-})
+    function changeMainVideo(i) {
+        let video = document.getElementById('video-main');
+        let source = document.getElementById('source');
 
+        video.setAttribute('poster', `assets/img/video-slider-posters/poster${i}.jpg`);
+        source.setAttribute('src', `https://github.com/rolling-scopes-school/stage1-tasks/blob/museum/assets/video/video${i}.mp4?raw=true`);
+        buttonsInitialState();
+        function buttonsInitialState() {
+            bigPlayButton.classList.remove('hidden');
+            playButton.classList.remove('hidden');
+            pauseButton.classList.add('hidden');
+            seek.style.background = 'linear-gradient(to right, #710707 0%, #710707 0%, #C4C4C4 0%, #C4C4C4 100%)';
+        }
+
+        video.load();
+    }
+
+}
 
 
 // YOUTUBE
@@ -55,39 +77,48 @@ tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-var player;
-function onYouTubeIframeAPIReady() {
-    console.log('onYouTubeIframeAPIReady')
-    player = new YT.Player('player', {
+const players = [];
+function createPlayer(domId, videoId) {
+    player = new YT.Player(domId, {
+        videoId,
         height: '390',
         width: '640',
-        videoId: 'zp1BXPX8jcU',
         playerVars: {
             'playsinline': 1
         },
         events: {
-            'onReady': onPlayerReady,
             'onStateChange': onPlayerStateChange
         }
     });
+    players.push(player);
 }
 
-// 4. The API will call this function when the video player is ready.
-function onPlayerReady(event) {
-    event.target.playVideo();
+function onYouTubeIframeAPIReady() {
+
+    createPlayer('ytplayer1', 'zp1BXPX8jcU');
+    createPlayer('ytplayer2', 'Vi5D6FKhRmo');
+    createPlayer('ytplayer3', 'NOhDysLnTvY');
+    createPlayer('ytplayer4', 'aWmJ5DgyWPI');
+    createPlayer('ytplayer5', '2OR0OCr6uRE');
+
+    // initialize video slider
+    initSlider();
 }
 
-// 5. The API calls this function when the player's state changes.
-//    The function indicates that when playing a video (state=1),
-//    the player should play for six seconds and then stop.
-var done = false;
 function onPlayerStateChange(event) {
-    console.log('onPlayerStateChange')
-    if (event.data == YT.PlayerState.PLAYING && !done) {
-        setTimeout(stopVideo, 6000);
-        done = true;
+
+    if (event.data == YT.PlayerState.PLAYING) {
+        players.forEach(p => {
+            if (p.id !== event.target.id) {
+                p.stopVideo()
+            }
+        })
     }
 }
-function stopVideo() {
-    player.stopVideo();
+
+function stopPlayerWhenChangeSlide() {
+    document.querySelectorAll('.yt-player').forEach(el => {
+        el.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+    });
 }
+

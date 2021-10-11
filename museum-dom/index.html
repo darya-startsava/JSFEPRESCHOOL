@@ -9,8 +9,6 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/css/splide.min.css">
-    <!-- <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-video@0.5.0/dist/css/splide-extension-video.min.css"> -->
 </head>
 
 <body>
@@ -172,57 +170,53 @@
                     <p class="section-video-text">Enter and visit one of the most famous museums in the world and enjoy
                         masterpieces such as Mona Lisa or Hammurabi's Code</p>
                 </div>
-                <video class="video" poster="assets/img/video-journay.jpg" preload>
-                    <source src="">
-                </video>
-                <div class="video-button-main-container">
-                    <button aria-label="Play" class="video-button-main"></button>
-                    <button aria-label="Play" class="video-button-main-1024"></button>
-                    <button aria-label="Play" class="video-button-main-768"></button>
-                    <button aria-label="Play" class="video-button-main-420"></button>
-                </div>
-                <div class="video-nav">
-                    <button aria-label="Play" class="video-button button-play"></button>
-                    <input aria-label="Progress bar" type="range" class="progress-bar" value="54" min="0" max="100"
-                        step="1">
-                    <button aria-label="Button volume" class="video-button button-volume"></button>
-                    <input aria-label="Volume control" type="range" class="volume-control" value="22" min="0" max="50"
-                        step="1">
-                    <button aria-label="Full screen video" class="video-button button-full-screen"></button>
+                <div id="video-container" class="video-container">
+                    <video id="video-main" class="video" type="video/mp4"
+                        poster="assets/img/video-slider-posters/poster0.jpg" controls preload>
+                        <source id="source"
+                            src="https://github.com/rolling-scopes-school/stage1-tasks/blob/museum/assets/video/video0.mp4?raw=true">
+                    </video>
+                    <button id="play-big" aria-label="Play" class="video-button-main"></button>
+                    <div class="video-button-main-container">
+                        
+                        <button aria-label="Play" class="video-button-main-1024"></button>
+                        <button aria-label="Play" class="video-button-main-768"></button>
+                        <button aria-label="Play" class="video-button-main-420"></button>
+                    </div>
+                    <div class="video-nav">
+                        <button id="play" aria-label="Play" class="video-button button-play"></button>
+                        <button id="pause" aria-label="Pause" class="video-button button-pause hidden"></button>
+                        <input class="progress-bar" id="seek" value="0" min="0" type="range" step="1">
+                        <button data-title="Mute (m)" id="button-volume" aria-label="Button volume"
+                            class="video-button button-volume"></button>
+                        <button data-title="Unmute (m)" id="button-volume-off" aria-label="Button volume"
+                            class="video-button button-volume-off hidden"></button>
+                        <input id="volume" aria-label="Volume control" type="range" class="volume-control" value="0.5"
+                            min="0" max="1" step="0.01">
+                        <button id="fullscreen" aria-label="Full screen video"
+                            class="video-button button-full-screen"></button>
+                        <button id="fullscreen-exit" aria-label="Full screen video"
+                            class="video-button button-full-screen-exit hidden"></button>
+                    </div>
                 </div>
                 <div class="video-slider-container">
                     <div class="splide splide-video">
                         <div class="splide__track">
                             <ul class="splide__list">
                                 <li class="splide__slide">
-                                    <iframe src="https://www.youtube.com/embed/zp1BXPX8jcU" title="YouTube video player"
-                                        loading="lazy"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen></iframe>
+                                    <div id="ytplayer1" class="yt-player"></div>
                                 </li>
                                 <li class="splide__slide">
-                                    <iframe src="https://www.youtube.com/embed/Vi5D6FKhRmo" title="YouTube video player"
-                                        loading="lazy"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen></iframe>
+                                    <div id="ytplayer2" class="yt-player"></div>
                                 </li>
                                 <li class="splide__slide">
-                                    <iframe src="https://www.youtube.com/embed/NOhDysLnTvY" title="YouTube video player"
-                                        loading="lazy"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen></iframe>
+                                    <div id="ytplayer3" class="yt-player"></div>
                                 </li>
                                 <li class="splide__slide">
-                                    <iframe src="https://www.youtube.com/embed/aWmJ5DgyWPI" title="YouTube video player"
-                                        loading="lazy"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen></iframe>
+                                    <div id="ytplayer4" class="yt-player"></div>
                                 </li>
                                 <li class="splide__slide">
-                                    <iframe src="https://www.youtube.com/embed/2OR0OCr6uRE" title="YouTube video player"
-                                        loading="lazy"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen></iframe>
+                                    <div id="ytplayer5" class="yt-player"></div>
                                 </li>
                             </ul>
                         </div>
@@ -402,8 +396,7 @@
     <script src="./js/self-review.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/js/splide.min.js"></script>
     <script src="./js/welcome-slider.js"></script>
-    <!-- <script
-        src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-video@0.5.0/dist/js/splide-extension-video.min.js"></script> -->
+    <script src="./js/video-player.js"></script>
     <script src="./js/video-slider.js"></script>
 </body>
 

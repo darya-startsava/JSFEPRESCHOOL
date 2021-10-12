@@ -130,15 +130,13 @@ function changeFullscreenIcon() {
 
 function toggleFullScreen() {
     if (document.fullscreenElement) {
+        console.log(1);
+        video.style.height = '650px';
         document.exitFullscreen();
-    } else if (document.webkitFullscreenElement) {
-        // Need this to support Safari
-        document.webkitExitFullscreen();
-    } else if (videoContainer.webkitRequestFullscreen) {
-        // Need this to support Safari
-        videoContainer.webkitRequestFullscreen();
     } else {
-        videoContainer.requestFullscreen();
+        console.log(3);
+        video.style.height = '95vh';
+        videoContainer.webkitRequestFullscreen();
     }
     changeFullscreenIcon()
 }
